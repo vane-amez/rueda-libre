@@ -1,0 +1,16 @@
+URL completa: http://127.0.0.1:5500/index.html 
+protocolo: http://
+host:127.0.0.1:5500
+puerto: Highest
+ruta: /index.html
+método de la petición:
+código de estado: 200 OK
+
+Se agrega en la barra de direciones /alquileres
+Aparece: "No se ha podido acceder al archivo" Es posible que se haya movido, editado o eliminado.
+ERR_FILE_NOT_FOUND
+Significa que el navegador no puede encontrar esa dirección URL.
+
+Rol HTML: Me dará la estructura de la escritura, titulos, subtitulos, parrafos, listas, etiquetas.  
+Rol CSS: Me dará el código de la parte visual, los colores de fondo, de las letras, hover (style).
+Rol JavaScript: Se pondran establecer los párametros de login, ingreso de información en la página creada.
