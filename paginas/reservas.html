@@ -1,87 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas.</title>
-    <link rel="stylesheet" href="../styles.css">
-   
+    <title>Rueda Libre | Reserva tu bicicleta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
 </head>
-<body style="background-color:honeydew;">
-    
-    <nav> 
-        <ul id="menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../paginas/tarifas.html">Tarifas y rutas</a></li>
-            <li><a href="../paginas/reservas.html">Reservas</a></li>
-        </ul>
-    </nav>
 
-    <div class="contenedor">
-    <img src="../img/portada.jpg" alt="portada" width="150px" height="50px">
-    <h1>Rueda Libre</h1>
-    </div>
+<body style="background-color:blanchedalmond;">
+    <header>
+        <div class="contenedor">
+            <img src="../img/portada.jpg" alt="portada" width="150px" height="50px">
+            <h1>Rueda Libre</h1>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./tarifas.html">Tarifas y rutas</a></li>
+                <li><a href="./reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Alquiler de bicicletas en Medellín.</h2>
-    <p><strong>¡Te damos la bienvenida a Rueda Libre!</strong></p>
+    <main>
+        <section>
+            <h2>Reserva tu bicicleta.</h2>
+            <p><strong>Contacto: </strong><a href="mailto:hola@ruedalibre.example">Escríbenos a
+                    hola@ruedalibre.example</a></p>
 
-    <section id="reservas"></section>
-    <h2>Reserva tu bicicleta.</h2>
+            <aside>
+                <h3>Horario de atención:</h3>
+                <dl>
+                    <dt><strong>Lunes a Viernes:</strong></dt>
+                    <dd>7:00 a.m. a 7:00 p.m.</dd>
+
+                    <dt><strong>Sábados, Domingos y Festivos:</strong></dt>
+                    <dd>6:00 a.m. a 2:00 p.m.</dd>
+                </dl>
+            </aside>
+        </section>
+
+        <section>
+            <h3>Formulario de reserva</h3>
+            <form action="#" method="POST">
+
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    <div>
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu alquiler</legend>
+                    <div>
+                        <label for="fecha">Fecha del alquiler:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+
+                    <p>Tipo de bicicleta:</p>
+                    <div>
+                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana">
+                        <label for="urbana">Urbana</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
+                        <label for="montana">Montaña</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="electrica" name="tipo_bicicleta" value="electrica">
+                        <label for="electrica">Eléctrica</label>
+                    </div>
+                </fieldset>
 
 
-    <p><strong>Contacto: </strong><a href="mailto:ruedalibre@gmail.com">Escríbenos a ruedalibre@gmail.com</a></p>
-    <p><strong>Horario de atención:</strong></p>
-    <ul>
-        <li>Lunes de 7:00 a.m. a 7:00 p.m</li>
-        <li>Martes de 7:00 a.m. a 7:00 p.m</li>
-        <li>Miercoles de 7:00 a.m. a 7:00 p.m</li>
-        <li>Jueves de 7:00 a.m. a 7:00 p.m</li>
-        <li>Viernes de 7:00 a.m. a 7:00 p.m</li>
-        <li>Domingos y festivos de 6:00 a.m. a 2:00 p.m.</li>
-    </ul>
-        
-        <section class="seccion-contacto">
-    <p><em>Escríbenos tu mensaje:</em></p>
-    
-    <form action="#" method="POST" class="formulario-contacto">
-        
-        <div class="formulario">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <fieldset>
+                    <legend>Confirmación</legend>
+                    <div>
+                        <input type="checkbox" id="politicas" name="politicas" required>
+                        <label for="politicas">Acepto las políticas de alquiler</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar reserva</button>
+            </form>
+        </section>
+
+        <div class="contenedor">
+            <button><a href="../index.html">Volver a la página principal.</a></button>
         </div>
 
-        <div class="formulario">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-        </div>
-
-        <div class="formulario">
-            <label for="telefono">Teléfono / WhatsApp:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
-        </div>
-
-        <div class="formulario">
-            <label for="producto">Producto de interés:</label>
-            <select id="producto" name="producto">
-                <option value="montaña">Bicicleta de montaña.</option>
-                <option value="eléctrica">Bicicleta eléctrica</option>
-                <option value="urbana">Bicicleta urbana</option>
-                <option value="rutas">Recorridos.</option>
-                <option value="otro">Otro servicio:</option>
-            </select>
-        </div>
-
-        <div class="formulario">
-            <label for="mensaje">Detalles de tu servicio:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe solicitud, tiempo de alquiler, fecha y hora." required></textarea>
-        </div>
-        <button type="submit" class="boton-enviar">Enviar mensaje</button>
-
-    <div class="contenedor">
-    <button><a href="../index.html">Volver a la página principal.</a></button>
-    </div>
-     <footer class="sitio-footer">
-        <p>2026 Rueda Libre. <em>Todos los derechos reservados.</em> ruedalibre@gmail.com</p>
+    </main>
+    <footer class="sitio-footer">
+        <p>2026 Rueda Libre. <em>Todos los derechos reservados.</em> hola@ruedalibre.example</p>
     </footer>
+
 </body>
+
 </html>
