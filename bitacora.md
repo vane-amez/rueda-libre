@@ -32,3 +32,17 @@ paginas/reservas.html| paginas/tarifas.html| tarifas.html
 type="radio" para que deje realizar la lista despegable en el formulario.
 textarea para poder copiar un mensaje en comentarios.
 type="number" para que el campo deje diligenciar números.
+
+6. Campo        |   Prueba 
+----------------|---------------------------------------------------
+Nombre          |   Al ingresar dos caracteres me rechaza la información y que aumente los caracteres.
+Documento	    |   Al ingresar cinco dígitos me rechaza la información y me solicita el número.
+Correo	        |   Al ingresar un correo sin @ me solicita formato válido.
+Celular	        |   Al ingresar un número que inicia por 2, no me deja registrar la información.
+Fecha	        |   No me deja seleccionar una fecha diferente a las establecidas en el rango.
+Tipo de bicicleta|  Al intentar enviar sin seleccionar una opción me solicita escogr una opción.
+Plan	        |   Al intentar enviar sin seleccionar una opción me solicita escogr una opción.
+Cantidad	    |   Al ingresar 0 bicicletas me requiere seleccionar la cantidad.
+Comentarios	    |   Al intentar escribir más de 300 caracteres no me deja copiar más.
+Políticas	    |   Al enviar sin aceptarlas se ve un mensaje de que debo aceptarlo para poder continuar.
+

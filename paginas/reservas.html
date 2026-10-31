@@ -49,26 +49,26 @@
                 <fieldset>
                     <legend>Tus datos</legend>
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                        <input type="text" id="nombre" name="nombre" minlength="3" required>
 
-                        <label for="number">Número de documento:</label>
-                        <input type="number" id="number" name="documento" required>
+                        <label for="documento">Número de documento:</label>
+                        <input type="text" id="documento" name="documento" pattern="[0-9]{6,10}"inputmode=numerico maxlength="10" required>
 
                         <label for="email">Correo electrónico:</label>
                         <input type="email" id="email" name="email" required>
 
                         <label for="tel">Celular:</label>
-                        <input type="tel" id="tel" name="tel" required>
+                        <input type="tel" id="tel" name="tel" pattern="3[0-9]{9}" inputmode="numeric" maxlength="10" required>
                 </fieldset>
 
                 <fieldset>
                     <legend>Tu alquiler</legend>
                         <label for="fecha">Fecha del alquiler:</label>
-                        <input type="date" id="fecha" name="fecha" required>
+                        <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
                 
                     <p>Tipo de bicicleta:</p>
                         <label for="urbana">Urbana</label>
-                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana">
+                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana" required>
                     
                         <label for="montana">Montaña</label>
                         <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
@@ -78,7 +78,7 @@
 
                     <p>Plan:</p>
                         <label for="hora">1 hora</label>    
-                        <input type="radio" id="hora" name="plan" value="1 hora">
+                        <input type="radio" id="hora" name="plan" value="1 hora" required>
 
                         <label for="medio">Medío día</label>    
                         <input type="radio" id="medio" name="plan" value="Medío día">
@@ -87,11 +87,11 @@
                         <input type="radio" id="completo" name="plan" value="Día completo">
 
                         <label for="cantidad">Cantidad de bicicletas:</label>
-                        <input type="number" id="cantidad" name="cantidad" min="1" required>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
 
                     <p>Recorrido guiado:</p>
                         <label for="rio">Río y parques</label>
-                        <input type="radio" id="rio" name="tipo_recorrido" value="rio">
+                        <input type="radio" id="rio" name="tipo_recorrido" value="rio" required>
                     
                         <label for="sabores">Sabores de Barrio</label>
                         <input type="radio" id="sabores" name="tipo_recorrido" value="sabores">
@@ -103,7 +103,7 @@
                 <fieldset>
                     <legend>Comentarios:</legend>
                         <label for="comentarios">¿Qué deseas agregar a tu solicitud?</label>
-                        <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
                 </fieldset>
 
                 <fieldset>
