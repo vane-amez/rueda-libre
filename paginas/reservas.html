@@ -48,46 +48,68 @@
 
                 <fieldset>
                     <legend>Tus datos</legend>
-                    <div>
                         <label for="nombre">Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required>
-                    </div>
 
-                    <div>
+                        <label for="number">Número de documento:</label>
+                        <input type="number" id="number" name="documento" required>
+
                         <label for="email">Correo electrónico:</label>
                         <input type="email" id="email" name="email" required>
-                    </div>
+
+                        <label for="tel">Celular:</label>
+                        <input type="tel" id="tel" name="tel" required>
                 </fieldset>
 
                 <fieldset>
                     <legend>Tu alquiler</legend>
-                    <div>
                         <label for="fecha">Fecha del alquiler:</label>
                         <input type="date" id="fecha" name="fecha" required>
-                    </div>
-
+                
                     <p>Tipo de bicicleta:</p>
-                    <div>
-                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana">
                         <label for="urbana">Urbana</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
+                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana">
+                    
                         <label for="montana">Montaña</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="electrica" name="tipo_bicicleta" value="electrica">
+                        <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
+                    
                         <label for="electrica">Eléctrica</label>
-                    </div>
+                        <input type="radio" id="electrica" name="tipo_bicicleta" value="electrica">
+
+                    <p>Plan:</p>
+                        <label for="hora">1 hora</label>    
+                        <input type="radio" id="hora" name="plan" value="1 hora">
+
+                        <label for="medio">Medío día</label>    
+                        <input type="radio" id="medio" name="plan" value="Medío día">
+
+                        <label for="completo">Día completo</label>    
+                        <input type="radio" id="completo" name="plan" value="Día completo">
+
+                        <label for="cantidad">Cantidad de bicicletas:</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                    <p>Recorrido guiado:</p>
+                        <label for="rio">Río y parques</label>
+                        <input type="radio" id="rio" name="tipo_recorrido" value="rio">
+                    
+                        <label for="sabores">Sabores de Barrio</label>
+                        <input type="radio" id="sabores" name="tipo_recorrido" value="sabores">
+                    
+                        <label for="reto">Reto Las Palmas</label>
+                        <input type="radio" id="reto" name="tipo_recorrido" value="reto">
                 </fieldset>
 
+                <fieldset>
+                    <legend>Comentarios:</legend>
+                        <label for="comentarios">¿Qué deseas agregar a tu solicitud?</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                </fieldset>
 
                 <fieldset>
                     <legend>Confirmación</legend>
-                    <div>
+                        <label for="politicas">Acepto las políticas de alquiler</label>    
                         <input type="checkbox" id="politicas" name="politicas" required>
-                        <label for="politicas">Acepto las políticas de alquiler</label>
-                    </div>
                 </fieldset>
 
                 <button type="submit">Enviar reserva</button>

@@ -27,3 +27,8 @@ paginas/reservas.html| index.html         | ../index.html
 paginas/reservas.html| paginas/tarifas.html| tarifas.html
 
 4. Deje la etiqueta <div> ya que me sirve como contenedor de los enlaces o etiquetas <a>.
+
+5. Para la realización del formulario voy a explicar los siguientes 3:
+type="radio" para que deje realizar la lista despegable en el formulario.
+textarea para poder copiar un mensaje en comentarios.
+type="number" para que el campo deje diligenciar números.
