@@ -46,3 +46,4 @@ Cantidad	    |   Al ingresar 0 bicicletas me requiere seleccionar la cantidad.
 Comentarios	    |   Al intentar escribir más de 300 caracteres no me deja copiar más.
 Políticas	    |   Al enviar sin aceptarlas se ve un mensaje de que debo aceptarlo para poder continuar.
 
+7. Se elimina el stylo en el body y se llama en el archivo css, se incluyen las paletas de colores.
