@@ -54,3 +54,7 @@ Propiedad que no se hereda: background-color - Se verificó que el color de fond
 
 9. Durante la revisión de los estilos se identificó un conflicto entre los selectores #menu a y .activo: Al inspeccionar el enlace mediante las herramientas DevTools, se evidenció que la propiedad color definida en .activo aparecía tachada, debido a que el selector #menu a tenía mayor especificidad.
 Para resolver el conflicto se implementó el selector #menu a.activo, aumentando su especificidad sin utilizar !important ni estilos en línea.
+
+10. Se realizó una prueba con DevTools sobre el elemento .tarjeta-servicio.
+Al mantener activa la propiedad box-sizing: border-box, se obtuvo un ancho exterior de 206 px. Posteriormente, al desactivar temporalmente esta propiedad, el ancho aumentó a 240 px.
+Se evidenció una diferencia de 34 px, correspondiente al espacio adicional generado por el padding y los bordes al utilizar el modelo content-box.
