@@ -62,3 +62,5 @@ Se evidenció una diferencia de 34 px, correspondiente al espacio adicional gene
 11. Minireto 12: Implementación de posicionamiento relativo, absoluto y fijo; incorporación de la etiqueta «Nuevo» y acceso flotante a WhatsApp; consolidación de estilos y publicación de la versión 1.0.
 
 12. Minireto 01 semana 2 - Un encabezado que se acomada: Flexbox: Se implementó el modelo de distribución flexible Flexbox en la hoja de estilos CSS compartida por las tres páginas del sitio Rueda Libre.
+
+13. Minireto 02 semana 2 - La flota en cuadrícula: Grid: Se realizaron pruebas mediante el modo dispositivo de DevTools en tres resoluciones: 1280 px, 900 px y 500 px. Se evidenció una distribución de cuatro, tres y una columna, respectivamente. Se comprobó que la cuadrícula reorganiza automáticamente las tarjetas de acuerdo con el ancho disponible, sin requerir modificaciones en CSS.
