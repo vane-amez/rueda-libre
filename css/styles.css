@@ -1,114 +1,165 @@
+:root {
+    --color-verde: #1E7A4F;
+    --color-naranja: #F39A2B;
+    --color-azul: #14213D;
+    --color-crema: #FAF6EF;
+    --color-gris: #5B6470;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-textos: 'Open Sans', sans-serif;
+    --espacio-pequeno: 0.5rem;
+    --espacio-mediano: 1rem;
+    --espacio-grande: 2rem;
+}
+
 body {
-    background-color: #FAF6EF;
-    color: #14213D;
-    font-family: Arial, sans-serif;
+    background-color: var(--color-crema);
+    color: var(--color-azul);
+    font-family: var(--fuente-textos);
+    font-weight: 400;
     margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-azul);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
 header {
-    background-color: #14213D;
-    padding: 15px;
+    background-color: var(--color-azul);
+    padding: var(--espacio-mediano);
 }
+
 header h1 {
-    color: #FAF6EF;
+    color: var(--color-crema);
 }
+
 .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 nav {
-    background-color: #1E7A4F;
-    padding: 10px;
+    background-color: var(--color-verde);
+    padding: var(--espacio-mediano);
 }
+
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: var(--espacio-grande);
     list-style: none;
 }
+
 nav a {
-    color: white;
+    color: var(--color-crema);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
+
 nav a:hover {
-    color: #F39A2B;
+    color: var(--color-naranja);
 }
-h1, h2, h3 {
-    color: #14213D;
-}
-h1, h2 {
-    text-align: center;
-}
+
 a {
-    color: #1E7A4F;
+    color: var(--color-verde);
 }
+
 a:hover {
-    color: #F39A2B;
+    color: var(--color-naranja);
 }
+
 .formulario {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
+
 .boton-enviar {
     width: 100%;
     padding: 12px;
-    background-color: #1E7A4F;
-    color: white;
-    font-weight: bold;
+    background-color: var(--color-verde);
+    color: var(--color-crema);
+    font-weight: 600;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
+
 .boton-enviar:hover {
-    background-color: #14213D;
+    background-color: var(--color-azul);
 }
+
 .texto-secundario {
-    color: #5B6470;
+    color: var(--color-gris);
 }
+
 .sitio-footer {
-    background-color: #14213D;
-    color: #FAF6EF;
-    padding: 15px;
+    background-color: var(--color-azul);
+    color: var(--color-crema);
+    padding: var(--espacio-mediano);
     text-align: center;
 }
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #14213D;
+    outline: 3px solid var(--color-azul);
     outline-offset: 3px;
 }
+
 main {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--espacio-grande);
 }
+
 table {
-    margin: 20px auto;
+    margin: var(--espacio-grande) auto;
     max-width: 100%;
 }
+
+.tabla-tarifas {
+    width: 600px;
+    text-align: center;
+    border: 1px solid var(--color-azul);
+}
+
 aside {
     display: flex;
     flex-direction: column;
 }
+
 p {
     text-align: justify;
     line-height: 1.6;
 }
-.boton-secundario {    
+
+.boton-secundario {
     display: inline-block;
-    background-color: #F39A2B;
-    color: #14213D;
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
     padding: 12px 20px;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
+
 .boton-secundario:hover {
-    background-color: #1E7A4F;
-    color: white;
+    background-color: var(--color-verde);
+    color: var(--color-crema);
 }

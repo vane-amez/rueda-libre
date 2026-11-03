@@ -47,3 +47,7 @@ Comentarios	    |   Al intentar escribir más de 300 caracteres no me deja copia
 Políticas	    |   Al enviar sin aceptarlas se ve un mensaje de que debo aceptarlo para poder continuar.
 
 7. Se elimina el stylo en el body y se llama en el archivo css, se incluyen las paletas de colores.
+
+8. Realizó la inspección de los estilos utilizando las DevTools:
+Propiedad que se hereda: font-family - Se comprobó que los párrafos reciben la tipografía Open Sans definida en el selector body.
+Propiedad que no se hereda: background-color - Se verificó que el color de fondo crema aplicado al body no se transmite automáticamente a los párrafos, debido a que esta propiedad no se hereda por defecto en CSS.
