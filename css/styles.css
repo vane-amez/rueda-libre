@@ -57,6 +57,7 @@ main {
     max-width: 70rem;
     margin: 0 auto;
     padding: var(--espacio-grande);
+    padding-bottom: 80px;
 }
 
 .contenedor {
@@ -135,11 +136,6 @@ a:hover {
     outline-offset: 3px;
 }
 
-.activo {
-    color: var(--color-verde);
-    font-weight: 600;
-}
-
 /* Botones */
 
 .boton-enviar {
@@ -214,7 +210,8 @@ a:hover {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
     outline: 3px solid var(--color-azul);
     outline-offset: 3px;
 }
@@ -274,6 +271,10 @@ aside {
     margin-top: var(--espacio-mediano);
 }
 
+.tarjeta-electrica h3 {
+    padding-right: 4rem;
+}
+
 .lista-tarjetas {
     list-style: none;
     padding: 0;
@@ -284,6 +285,23 @@ aside {
 .lista-tarjetas li {
     display: inline-block;
     vertical-align: top;
+}
+
+/* Etiqueta Nuevo en bicicletas eléctricas */
+.tarjeta-electrica {
+    position: relative;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 /* Formulario */
@@ -333,8 +351,6 @@ select:hover {
 input:focus,
 textarea:focus,
 select:focus {
-    outline: 3px solid var(--color-verde);
-    outline-offset: 2px;
     border-color: var(--color-azul);
 }
 
@@ -383,4 +399,22 @@ fieldset {
     text-align: justify;
     line-height: 1.6;
     margin-bottom: var(--espacio-pequeno);
+}
+
+/* Acceso flotante a WhatsApp */
+.boton-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--color-verde);
+    color: var(--color-azul);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 1000;
+}
+
+.boton-whatsapp:hover {
+    background-color: var(--color-verde);
 }

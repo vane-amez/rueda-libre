@@ -58,3 +58,5 @@ Para resolver el conflicto se implementó el selector #menu a.activo, aumentando
 10. Se realizó una prueba con DevTools sobre el elemento .tarjeta-servicio.
 Al mantener activa la propiedad box-sizing: border-box, se obtuvo un ancho exterior de 206 px. Posteriormente, al desactivar temporalmente esta propiedad, el ancho aumentó a 240 px.
 Se evidenció una diferencia de 34 px, correspondiente al espacio adicional generado por el padding y los bordes al utilizar el modelo content-box.
+
+11. Minireto 12: Implementación de posicionamiento relativo, absoluto y fijo; incorporación de la etiqueta «Nuevo» y acceso flotante a WhatsApp; consolidación de estilos y publicación de la versión 1.0.
