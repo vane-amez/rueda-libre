@@ -163,3 +163,77 @@ p {
     background-color: var(--color-verde);
     color: var(--color-crema);
 }
+
+.activo {
+    color: var(--color-verde);
+    font-weight: 600;
+}
+
+#menu a {
+    color: var(--color-gris);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+#menu a.activo {
+    color: var(--color-crema);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#menu a:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+}
+
+#menu a:focus {
+    outline: 3px solid var(--color-crema);
+    outline-offset: 3px;
+}
+
+.boton-reservar {
+    display: inline-block;
+    background-color: var(--color-verde);
+    color: var(--color-crema);
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.boton-reservar:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+}
+
+.boton-reservar:focus {
+    outline: 3px solid var(--color-azul);
+    outline-offset: 3px;
+}
+
+input,
+textarea,
+select {
+    font-family: var(--fuente-textos);
+    color: var(--color-azul);
+    border: 1px solid var(--color-gris);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: var(--color-verde);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--color-verde);
+    outline-offset: 2px;
+    border-color: var(--color-azul);
+}

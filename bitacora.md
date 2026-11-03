@@ -51,3 +51,6 @@ Políticas	    |   Al enviar sin aceptarlas se ve un mensaje de que debo aceptar
 8. Realizó la inspección de los estilos utilizando las DevTools:
 Propiedad que se hereda: font-family - Se comprobó que los párrafos reciben la tipografía Open Sans definida en el selector body.
 Propiedad que no se hereda: background-color - Se verificó que el color de fondo crema aplicado al body no se transmite automáticamente a los párrafos, debido a que esta propiedad no se hereda por defecto en CSS.
+
+9. Durante la revisión de los estilos se identificó un conflicto entre los selectores #menu a y .activo: Al inspeccionar el enlace mediante las herramientas DevTools, se evidenció que la propiedad color definida en .activo aparecía tachada, debido a que el selector #menu a tenía mayor especificidad.
+Para resolver el conflicto se implementó el selector #menu a.activo, aumentando su especificidad sin utilizar !important ni estilos en línea.
