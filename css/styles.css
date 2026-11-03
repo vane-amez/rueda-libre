@@ -66,41 +66,51 @@ main {
     align-items: center;
 }
 
-/* Encabezado y navegación */
+/* Encabezado con flexbox */
 
-header {
+header.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-mediano);
     background-color: var(--color-azul);
     padding: var(--espacio-mediano);
 }
 
-header h1 {
-    color: var(--color-crema);
+.marca {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-mediano);
 }
 
-nav {
+.marca h1 {
+    color: var(--color-crema);
+    margin: 0;
+}
+
+/* Navegación con flexbox */
+header.encabezado nav {
     background-color: var(--color-verde);
     padding: var(--espacio-mediano);
 }
 
-nav ul {
-    display: block;
-    text-align: center;
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacio-mediano);
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: var(--espacio-pequeno);
+#menu li {
+    margin: 0;
 }
 
-nav a {
-    color: var(--color-crema);
-    text-decoration: none;
-    font-weight: 600;
-}
-
+/* Enlaces generales */
 a {
     color: var(--color-verde);
 }
@@ -112,7 +122,7 @@ a:hover {
 /* Menú */
 
 #menu a {
-    color: var(--color-gris);
+    color: var(--color-crema);
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
@@ -198,11 +208,32 @@ a:hover {
 
 /* Pie de página */
 
+/* Pie de página con Flexbox */
+
 .sitio-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--espacio-grande);
     background-color: var(--color-azul);
     color: var(--color-crema);
-    padding: var(--espacio-mediano);
-    text-align: center;
+    padding: var(--espacio-grande);
+}
+
+.footer-bloque {
+    flex: 1;
+    min-width: 12rem;
+}
+
+.footer-bloque h3 {
+    color: var(--color-crema);
+    text-align: left;
+}
+
+.footer-bloque p {
+    text-align: left;
 }
 
 /* Accesibilidad */
@@ -417,4 +448,29 @@ fieldset {
 
 .boton-whatsapp:hover {
     background-color: var(--color-verde);
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 600px) {
+    header.encabezado {
+        justify-content: center;
+    }
+
+    .marca {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header.encabezado nav {
+        width: 100%;
+    }
+
+    #menu {
+        justify-content: center;
+    }
+
+    .sitio-footer {
+        flex-direction: column;
+    }
 }

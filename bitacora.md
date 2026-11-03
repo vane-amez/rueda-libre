@@ -60,3 +60,5 @@ Al mantener activa la propiedad box-sizing: border-box, se obtuvo un ancho exter
 Se evidenció una diferencia de 34 px, correspondiente al espacio adicional generado por el padding y los bordes al utilizar el modelo content-box.
 
 11. Minireto 12: Implementación de posicionamiento relativo, absoluto y fijo; incorporación de la etiqueta «Nuevo» y acceso flotante a WhatsApp; consolidación de estilos y publicación de la versión 1.0.
+
+12. Minireto 01 semana 2 - Un encabezado que se acomada: Flexbox: Se implementó el modelo de distribución flexible Flexbox en la hoja de estilos CSS compartida por las tres páginas del sitio Rueda Libre.
