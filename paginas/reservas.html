@@ -29,12 +29,95 @@
     </header>
 
     <main>
-        <section>
-            <h2>Reserva tu bicicleta.</h2>
-            <p><strong>Contacto: </strong><a href="mailto:hola@ruedalibre.example">Escríbenos a
-                    hola@ruedalibre.example</a></p>
+        <div class="reservas-layout">
+            <section class="formulario-reserva">
+                <h2>Reserva tu bicicleta</h2>
+                <h3>Formulario de reserva</h3>
+                <form action="#" method="POST" class="formulario">
+                    <fieldset>
+                        <legend>Tus datos</legend>
+                        <div class="campo-grupo">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
 
-            <aside>
+                        <div class="campo-grupo">
+                            <label for="documento">Número de documento:</label>
+                            <input type="text" id="documento" name="documento" required>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="celular">Celular:</label>
+                            <input type="tel" id="celular" name="celular" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tu alquiler</legend>
+                        <label for="fecha">Fecha del alquiler:</label>
+                        <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
+
+                        <p>Tipo de bicicleta:</p>
+                        <label for="urbana">Urbana</label>
+                        <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana" required>
+
+                        <label for="montana">Montaña</label>
+                        <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
+
+                        <label for="electrica">Eléctrica</label>
+                        <input type="radio" id="electrica" name="tipo_bicicleta" value="electrica">
+
+                        <p>Plan:</p>
+                        <label for="hora">1 hora</label>
+                        <input type="radio" id="hora" name="plan" value="1 hora" required>
+
+                        <label for="medio">Medío día</label>
+                        <input type="radio" id="medio" name="plan" value="Medío día">
+
+                        <label for="completo">Día completo</label>
+                        <input type="radio" id="completo" name="plan" value="Día completo">
+
+                        <label for="cantidad">Cantidad de bicicletas:</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
+
+                        <p>Recorrido guiado:</p>
+                        <label for="rio">Río y parques</label>
+                        <input type="radio" id="rio" name="tipo_recorrido" value="rio">
+
+                        <label for="sabores">Sabores de Barrio</label>
+                        <input type="radio" id="sabores" name="tipo_recorrido" value="sabores">
+
+                        <label for="reto">Reto Las Palmas</label>
+                        <input type="radio" id="reto" name="tipo_recorrido" value="reto">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Comentarios:</legend>
+                        <label for="comentarios">¿Qué deseas agregar a tu solicitud?</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmación</legend>
+                        <label for="politicas">Acepto las políticas de alquiler</label>
+                        <input type="checkbox" id="politicas" name="politicas" required>
+                    </fieldset>
+
+                    <button type="submit" class="boton-enviar">Enviar reserva</button>
+                </form>
+
+            </section>
+            <aside class="informacion-contacto">
+                <h2>Información de contacto</h2>
+                <p>
+                    <strong>Contacto:</strong>
+
+                <p>Escríbenos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
                 <h3>Horario de atención:</h3>
                 <dl>
                     <dt><strong>Lunes a Viernes:</strong></dt>
@@ -44,94 +127,10 @@
                     <dd>6:00 a.m. a 2:00 p.m.</dd>
                 </dl>
             </aside>
-        </section>
-
-        <section>
-            <h3>Formulario de reserva</h3>
-            <form action="#" method="POST" class="formulario">
-                <fieldset>
-                    <legend>Tus datos</legend>
-                    <div class="campo-grupo">
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-
-                    <div class="campo-grupo">
-                        <label for="documento">Número de documento:</label>
-                        <input type="text" id="documento" name="documento" required>
-                    </div>
-
-                    <div class="campo-grupo">
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </div>
-
-                    <div class="campo-grupo">
-                        <label for="celular">Celular:</label>
-                        <input type="tel" id="celular" name="celular" required>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Tu alquiler</legend>
-                    <label for="fecha">Fecha del alquiler:</label>
-                    <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required>
-
-                    <p>Tipo de bicicleta:</p>
-                    <label for="urbana">Urbana</label>
-                    <input type="radio" id="urbana" name="tipo_bicicleta" value="urbana" required>
-
-                    <label for="montana">Montaña</label>
-                    <input type="radio" id="montana" name="tipo_bicicleta" value="montana">
-
-                    <label for="electrica">Eléctrica</label>
-                    <input type="radio" id="electrica" name="tipo_bicicleta" value="electrica">
-
-                    <p>Plan:</p>
-                    <label for="hora">1 hora</label>
-                    <input type="radio" id="hora" name="plan" value="1 hora" required>
-
-                    <label for="medio">Medío día</label>
-                    <input type="radio" id="medio" name="plan" value="Medío día">
-
-                    <label for="completo">Día completo</label>
-                    <input type="radio" id="completo" name="plan" value="Día completo">
-
-                    <label for="cantidad">Cantidad de bicicletas:</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
-
-                    <p>Recorrido guiado:</p>
-                    <label for="rio">Río y parques</label>
-                    <input type="radio" id="rio" name="tipo_recorrido" value="rio">
-
-                    <label for="sabores">Sabores de Barrio</label>
-                    <input type="radio" id="sabores" name="tipo_recorrido" value="sabores">
-
-                    <label for="reto">Reto Las Palmas</label>
-                    <input type="radio" id="reto" name="tipo_recorrido" value="reto">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Comentarios:</legend>
-                    <label for="comentarios">¿Qué deseas agregar a tu solicitud?</label>
-                    <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Confirmación</legend>
-                    <label for="politicas">Acepto las políticas de alquiler</label>
-                    <input type="checkbox" id="politicas" name="politicas" required>
-                </fieldset>
-
-                <button type="submit" class="boton-enviar">Enviar reserva</button>
-            </form>
-        </section>
-
-
+        </div>
         <div class="contenedor">
             <a href="../index.html" class="boton-secundario">Volver a la página principal</a>
         </div>
-
     </main>
 
     <a href="https://wa.me/573000000000" class="boton-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>

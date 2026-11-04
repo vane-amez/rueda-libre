@@ -64,3 +64,5 @@ Se evidenció una diferencia de 34 px, correspondiente al espacio adicional gene
 12. Minireto 01 semana 2 - Un encabezado que se acomada: Flexbox: Se implementó el modelo de distribución flexible Flexbox en la hoja de estilos CSS compartida por las tres páginas del sitio Rueda Libre.
 
 13. Minireto 02 semana 2 - La flota en cuadrícula: Grid: Se realizaron pruebas mediante el modo dispositivo de DevTools en tres resoluciones: 1280 px, 900 px y 500 px. Se evidenció una distribución de cuatro, tres y una columna, respectivamente. Se comprobó que la cuadrícula reorganiza automáticamente las tarjetas de acuerdo con el ancho disponible, sin requerir modificaciones en CSS.
+
+14. Minireto 03 semana 2 - Layout en dos dimensiones: Utilice flexbox en la portada porque necesitabas alinear dos elementos (organización horizontal) y Layout - Grid en reservas porque necesitabas distribuir dos áreas de contenido(1 era el formulario y la otra era el contacto.)
