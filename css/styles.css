@@ -32,11 +32,14 @@
 
 /* Estilos base de toda la página */
 body {
-    background-color: var(--color-crema); /* Color de fondo general */
-    color: var(--color-azul);             /* Color de texto por defecto */
+    background-color: var(--color-crema);
+    /* Color de fondo general */
+    color: var(--color-azul);
+    /* Color de texto por defecto */
     font-family: var(--fuente-textos);
     font-weight: 400;
-    margin: 0;                            /* Elimina los márgenes exteriores del navegador */
+    margin: 0;
+    /* Elimina los márgenes exteriores del navegador */
 }
 
 /* 3. Tipografías y enlaces */
@@ -162,7 +165,8 @@ img {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    z-index: 1000; /* Asegura que quede por encima de cualquier otro elemento */
+    z-index: 1000;
+    /* Asegura que quede por encima de cualquier otro elemento */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
