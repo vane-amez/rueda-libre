@@ -69,3 +69,14 @@ Se evidenció una diferencia de 34 px, correspondiente al espacio adicional gene
 
 15. Minireto 04 semana 2 - mobile-first para que el sitio funcione en móvil, tablet y escritorio: En la inspección de la página se observa que no se desborda las tablas, auqnue se observa en algunas que no se corren verticalmente, sino que se quedan horizontalmente y se alargan en tipo de pantalla para celular, lo mismo paso con el formulario y contacto que tienen layaout. Para corregir esto se cambio grid-template-columns: 2fr; a una sola/grid-template-columns: 1fr.
 En tarifas y rutas, las tablas quedan por fuera del contenedor igual que el boton del WhatsApp, no se adaptan a la versión del celular, se añade regla responsiva con overflow-x: auto en pantallas menores a 768 px.
+
+16. Minireto 05 semana 2 - Aplicación de Bootstrap: 
+Tiempo invertido: 20 minutos.
+Cantidad de código (CSS propio vs. Bootstrap):**
+- Versión CSS propio: 35 líneas dedicadas exclusivamente a la distribución y presentación de la flota (`.cuadricula-flota` con Grid `auto-fit`, `.tarjeta-flota` con Flexbox, alturas de imagen y alineación del botón), sumadas a las reglas heredadas de `.tarjeta-servicio` y `.boton-reservar`.
+- Versión Bootstrap 5.3: 0 líneas de CSS escrito. Toda la distribución se resolvió directamente en el HTML utilizando 6 clases del sistema de grillas (`container`, `row`, `g-4`, `col-12`, `col-sm-6`, `col-lg-4`, `col-xl-3`) más clases utilitarias de tarjeta (`card`, `h-100`).
+-¿Qué me dio Bootstrap sin esfuerzo?: Breakpoints responsivos exactos (1, 2, 3 y 4 columnas) sin escribir `@media` queries.
+Espaciado uniforme (*gutters* horizontales y verticales con `g-4`) y tarjetas de igual altura (`h-100`) alineadas automáticamente.
+Imágenes adaptables al ancho de la tarjeta (`card-img-top`) y resets tipográficos limpios desde el primer momento.
+- ¿Qué control perdí?: Identidad visual de marca:** Se perdieron nuestra paleta de colores personalizada (`--color-azul`, `--color-verde`, `--color-crema`, `--color-naranja`) y nuestras tipografías (`Montserrat` y `Open Sans`), adoptando los tonos y fuentes genéricos de Bootstrap.
+Alturas de imagen fijas: En CSS propio teníamos `height: 180px; object-fit: cover;` para recortar todas las fotos al mismo alto exacto; sin CSS adicional en Bootstrap, las imágenes conservan su proporción original y pueden variar ligeramente de altura si las fotos tienen dimensiones distintas.
