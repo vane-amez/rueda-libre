@@ -127,3 +127,13 @@ R// Sí, la adopción del framework redujo drásticamente el código CSS persona
 --Alerta superior: Se agregó una franja de advertencia en la parte alta del formulario para recordarle al usuario que debe llevar su documento de identidad original.   
 -Validación visual con Bootstrap: Se configuró el formulario con novalidate y el script oficial para que, si el usuario intenta enviar datos vacíos o incorrectos, aparezcan mensajes de error claros y específicos debajo de cada campo obligatorio.   
 -Modal de políticas: Se creó una ventana emergente que se abre con un botón al lado de la casilla de aceptación. Muestra las 5 políticas de alquiler en una lista y se puede cerrar con el mouse (clic en la "X" o en "Entendido") o presionando la tecla Esc.
+
+23. Minireto 12 semana 2 - Rueda Libre v2.0 con identidad propia:
+-Identidad visual aplicada: Se sobrescribieron las variables globales de Bootstrap en root y las variables de componente de botón para integrar el Verde Ruta, el Azul Profundo y el fondo Crema, junto con la variante propia btn-naranja.
+
+-Clases propias e íconos: Se crearon e integraron tres clases complementarias (`.hero-rueda-libre`, `.titulo-seccion-marca` y `.footer-marca`) respetando la cascada sin usar `!important` ni modificar el archivo de Bootstrap. 
+Se incorporaron íconos de Bootstrap Icons en la barra de navegación, beneficios, datos de contacto y botón flotante de WhatsApp con atributos `aria-hidden="true"` y `aria-label` para accesibilidad.
+
+-Pruebas finales (v2.0): Se verificó la adaptabilidad en móvil (375 px), tablet (768 px) y escritorio (1280 px), la navegación completa con teclado (`Tab` y `Esc` en el modal) y el cumplimiento del ratio de contraste mínimo de 4.5:1 en textos, botones y pie de página.
+  - Antes (Bootstrap por defecto): `./img/antes-rueda-libre.PNG`
+  - Después (Personalización v2.0): `./img/despues-rueda-libre.PNG`

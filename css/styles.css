@@ -1,4 +1,4 @@
-/* 1. Variables de marca */
+/* 1. Variables de marca y sobrescritura de Bootstrap */
 :root {
     /* Paleta de colores principal */
     --color-verde: #1E7A4F;
@@ -10,6 +10,18 @@
     /* Familias tipográficas */
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-textos: 'Open Sans', sans-serif;
+
+    /* Sobrescritura de variables globales del framework Bootstrap */
+    --bs-primary: #1E7A4F;
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-body-font-family: var(--fuente-textos);
+    --bs-body-color: var(--color-azul);
+    --bs-body-bg: var(--color-crema);
+    --bs-link-color: var(--color-verde);
+    --bs-link-hover-color: var(--color-naranja);
+    --bs-border-radius: 0.75rem;
+    --bs-link-color-rgb: 30, 122, 79;
+    --bs-link-hover-color-rgb: 243, 154, 43;
 }
 
 /* 2. Configuración global y reinicio */
@@ -62,7 +74,61 @@ img {
     height: auto;
 }
 
-/* 5. Componentes específicos */
+/* 5. Personalización de componentes de Bootstrap */
+/* Adaptación de los botones principales (Verde Ruta) mediante variables de componente */
+.btn-primary {
+    --bs-btn-bg: var(--color-verde);
+    --bs-btn-border-color: var(--color-verde);
+    --bs-btn-hover-bg: #155737;
+    --bs-btn-hover-border-color: #124a2f;
+    --bs-btn-active-bg: #124a2f;
+    --bs-btn-active-border-color: #0e3b25;
+}
+
+/* Creación de la variante propia de botón (Naranja Pedal) cumpliendo con el contraste */
+.btn-naranja {
+    --bs-btn-bg: var(--color-naranja);
+    --bs-btn-border-color: var(--color-naranja);
+    --bs-btn-color: var(--color-azul);
+    --bs-btn-hover-bg: #d98522;
+    --bs-btn-hover-border-color: #cc7d1f;
+    --bs-btn-hover-color: var(--color-azul);
+    --bs-btn-active-bg: #cc7d1f;
+    --bs-btn-active-border-color: #bf741d;
+    --bs-btn-active-color: var(--color-azul);
+    font-weight: 600;
+}
+
+/* 6. Clases propias complementarias */
+/* Estilo de portada con acento visual en los bordes */
+.hero-rueda-libre {
+    background-color: rgba(30, 122, 79, 0.08);
+    border-left: 5px solid var(--color-verde);
+}
+
+/* Títulos de sección personalizados con línea decorativa inferior */
+.titulo-seccion-marca {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.titulo-seccion-marca::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-naranja);
+}
+
+/* Pie de página corporativo adaptado a la identidad de marca */
+.footer-marca {
+    background-color: var(--color-azul);
+    border-top: 4px solid var(--color-naranja);
+}
+
+/* 7. Componentes específicos */
 /* Contenedor principal de la tabla de tarifas */
 .tabla-tarifas {
     width: 100%;
