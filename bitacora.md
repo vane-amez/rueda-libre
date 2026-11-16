@@ -99,3 +99,22 @@ Diagnóstico con DevTools: Las reglas globales de Bootstrap para los enlaces (`c
 -Conflicto 3: Márgenes automáticos y espaciados (*gutters*) en contenedores principales.
 Diagnóstico con DevTools:* Los estilos de la clase `.container` de Bootstrap y nuestros márgenes de sección personalizados competían por el espacio, generando saltos de línea indeseados en pantallas medianas al usar simultáneamente contenedores flex antiguos y la nueva grilla `row g-4`.
 Solución:* Se eliminaron del archivo `styles.css` las reglas obsoletas de `.portada` y `.galeria-rutas`, delegando toda la distribución espacial y separación de columnas exclusivamente a las clases de utilidad de Bootstrap.
+
+19. Minireto 08 semana 2 - migración completa a Bootstrap:
+-Tiempo invertido en el rediseño y migración: Versión inicial en CSS puro (Flexbox/Grid manual): ~6 horas de desarrollo, pruebas de media queries y ajuste de desbordamientos en tablas y formularios.
+Migración y refactorización a Bootstrap 5.3: ~2 horas (aprovechando componentes nativos y grillas predefinidas).
+
+-Reducción de líneas de código:
+ CSS styles: ~350 líneas de código (incluyendo layouts de grillas complejas, media queries para diferentes dispositivos, posicionamientos y clases de tarjetas manuales).
+ Con Bootstrap: ~110 líneas de código. El archivo ahora se limita exclusivamente a la capa de identidad visual, variables de marca, tipografías y bordes/tablas personalizadas.
+
+-Ventajas:
+Adaptabilidad inmediata (*responsiveness*) sin necesidad de escribir media queries personalizadas.
+Menor costo de mantenimiento técnico gracias al uso de clases utilitarias estandarizadas (`g-4`, `col-12`, `d-flex`).
+Formularios y tablas limpios, con accesibilidad integrada por defecto.
+
+ -Desventajas:
+Curva inicial para adaptar los selectores globales de tipografía y colores de marca (`--color-verde`, `--color-azul`) sin que colisionen con las clases nativas de Bootstrap.
+
+-Conclusión:¿Bootstrap realmente redujo el trabajo? 
+R// Sí, la adopción del framework redujo drásticamente el código CSS personalizado, eliminó los errores comunes de desbordamiento horizontal en móviles y aceleró la maquetación de nuevas secciones, permitiendo enfocar los esfuerzos en la experiencia del usuario y la identidad de marca de Rueda Libre.
