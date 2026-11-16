@@ -87,3 +87,15 @@ Alturas de imagen fijas: En CSS propio teníamos `height: 180px; object-fit: cov
 -`gap-4` (Flexbox / Grid gap): Define un espacio de separación uniforme y estandarizado (equivalente a `1.5rem`) entre los elementos hijos directos de un contenedor flexible (`d-flex`) o de grilla, evitando la necesidad de aplicar márgenes manuales.
 -`text-bg-dark` (Color and background): Aplica simultáneamente un color de fondo oscuro corporativo o temático (`dark`) y ajusta automáticamente el color del texto a claro para garantizar el contraste adecuado y la accesibilidad web.
 -`rounded-4` (Borders / Border-radius): Modifica el radio de las esquinas del contenedor aplicando un borde redondeado amplio y moderno (equivalente a `1rem`), dándole un acabado visual estilizado a la franja principal sin escribir reglas en CSS.
+
+18. Minireto 07 semana 2 - Migración del Index con Bootstrap:
+-Conflicto 1: Tamaños y pesos de los encabezados (`h1`, `h2`, `h3`).
+Diagnóstico con DevTools: Bootstrap aplica un sistema tipográfico estricto basado en tamaños relativos fijos (`rem`) a nivel global para las etiquetas HTML, lo que anulaba el estilo de los selectores base.
+Solución: Se resolvieron aplicando de forma explícita clases utilitarias de Bootstrap directamente en el marcado HTML donde se requería control estricto (como `fw-bold`, `text-center`, `fs-5`), permitiendo coexistir las fuentes globales de marca cargadas en el head ,con la jerarquía visual del framework sin usar `!important`.
+
+-Conflicto 2: Comportamiento de los enlaces (`<a>`) y colores heredados.
+Diagnóstico con DevTools: Las reglas globales de Bootstrap para los enlaces (`color: var(--bs-link-color)`) sobreescribían el color verde corporativo que teníamos configurado en nuestros estilos generales para la etiqueta.Solución: Se respetó la cascada cargando `styles.css` después de Bootstrap y se utilizaron clases utilitarias de texto específicas de Bootstrap en los elementos críticos (como `text-success` en los precios y botones) para asegurar la identidad visual sin romper los enlaces predeterminados del menú.
+
+-Conflicto 3: Márgenes automáticos y espaciados (*gutters*) en contenedores principales.
+Diagnóstico con DevTools:* Los estilos de la clase `.container` de Bootstrap y nuestros márgenes de sección personalizados competían por el espacio, generando saltos de línea indeseados en pantallas medianas al usar simultáneamente contenedores flex antiguos y la nueva grilla `row g-4`.
+Solución:* Se eliminaron del archivo `styles.css` las reglas obsoletas de `.portada` y `.galeria-rutas`, delegando toda la distribución espacial y separación de columnas exclusivamente a las clases de utilidad de Bootstrap.
