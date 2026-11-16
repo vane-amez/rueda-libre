@@ -149,3 +149,8 @@ Se incorporaron íconos de Bootstrap Icons en la barra de navegación, beneficio
 
 -Diferencia clave entre un framework de componentes y uno utility-first:
   Un framework de componentes (como Bootstrap) entrega piezas de interfaz ya diseñadas, que aceleran el armado estándar, pero obligan a pelear contra sus estilos base o sobrescribir variables en una hoja CSS externa cuando se busca un diseño a medida. En cambio, un framework utility-first (como Tailwind CSS) no impone componentes prediseñados; ofrece bloques de construcción de bajo nivel (utilidades) que permiten diseñar interfaces totalmente personalizadas directamente en el HTML sin escribir CSS adicional ni sufrir conflictos de especificidad.
+
+  25. Minireto 02 semana 3 - Tailwind con la CLI y botones: 
+-Clase utilizada (`bg-emerald-600`): Aparece compilada en el archivo `output.css` junto con sus reglas CSS traducidas, ya que la CLI escanea el código HTML para inyectar únicamente las reglas que se están implementando.
+-Clase no utilizada (`bg-pink-500`): No aparece registrada en absoluto dentro de `output.css`. 
+¿Por qué ocurre?: A diferencia del Play CDN (que descarga e interpreta todo el motor de Tailwind de forma dinámica en el navegador), la CLI funciona bajo un sistema de rastreo estático (*jit* / *on-demand*). Lee los archivos fuente y descarta de forma inteligente todas las clases inútiles o no declaradas en el marcado, generando un archivo CSS final extremadamente ligero y optimizado para producción.
