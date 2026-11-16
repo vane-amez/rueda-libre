@@ -156,3 +156,21 @@ Se incorporaron íconos de Bootstrap Icons en la barra de navegación, beneficio
 ¿Por qué ocurre?: A diferencia del Play CDN (que descarga e interpreta todo el motor de Tailwind de forma dinámica en el navegador), la CLI funciona bajo un sistema de rastreo estático (*jit* / *on-demand*). Lee los archivos fuente y descarta de forma inteligente todas las clases inútiles o no declaradas en el marcado, generando un archivo CSS final extremadamente ligero y optimizado para producción.
 
 26. Minireto 03 semana 3 - cards de rutas nocturnas: Se crean 3 tarjetas en organización vertical con los botones y utilidades.
+
+27. Minireto 04 semana 3 - Kit de componentes Rueda Nocturna v0.1:
+Para garantizar consistencia visual entre todos los elementos de la campaña, se definieron y aplicaron las siguientes reglas de diseño con utilidades de Tailwind CSS:
+
+-Paleta de colores unificada:
+Superficies oscuras (modo nocturno):* `bg-slate-950` para el fondo general y campos de entrada (`input`), `bg-slate-900` para contenedores principales y cards, y `border-slate-800` / `border-slate-700` para delimitaciones sutiles.
+Acentos de marca y estados:* `emerald-600` / `emerald-500` para acciones principales y foco activo (`focus:ring-emerald-400/50`), `amber-400` para etiquetas destacadas, precios y advertencias, y `sky-400` para mensajes informativos.
+Jerarquía tipográfica de texto:* `text-white` para encabezados (`h1`–`h3`), `text-slate-100` / `text-slate-300` para lectura general y `text-slate-400` para etiquetas secundarias y textos de ayuda.
+
+-Radios de borde consistentes:
+`rounded-3xl` para contenedores mayores y cards completas.
+`rounded-xl` para elementos interactivos y bloques internos (botones, inputs y alertas).
+`rounded-full` exclusivamente para insignias o etiquetas tipo píldora (badges).
+
+-Escala de espaciado y foco:
+Relleno interno estandarizado en `p-6` / `p-8` para cajas y alertas, `px-4 py-3.5` para inputs, y `px-6` a `px-8` con `py-3.5` a `py-4` para botones.
+Separación vertical rítmica mediante `space-y-2` (campos de formulario), `space-y-4` / `space-y-6` (bloques internos) y `space-y-16` (secciones principales).
+Accesibilidad uniforme por teclado: todos los botones e inputs reemplazan el contorno nativo (`focus:outline-none`) por un anillo visible de 4 px (`focus:ring-4`).
