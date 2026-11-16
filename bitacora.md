@@ -174,3 +174,10 @@ Jerarquía tipográfica de texto:* `text-white` para encabezados (`h1`–`h3`), 
 Relleno interno estandarizado en `p-6` / `p-8` para cajas y alertas, `px-4 py-3.5` para inputs, y `px-6` a `px-8` con `py-3.5` a `py-4` para botones.
 Separación vertical rítmica mediante `space-y-2` (campos de formulario), `space-y-4` / `space-y-6` (bloques internos) y `space-y-16` (secciones principales).
 Accesibilidad uniforme por teclado: todos los botones e inputs reemplazan el contorno nativo (`focus:outline-none`) por un anillo visible de 4 px (`focus:ring-4`).
+
+28. Minireto 05 semana 3 - Maquetación de la landing:
+Decisión de Layout:
+
+-Contenedor unificado: Todas las secciones (`header`, `main > section`, `footer`) comparten exactamente el mismo contenedor (`w-full max-w-6xl mx-auto px-6`), garantizando alineación vertical estricta de márgenes de inicio a fin.
+-¿Cómo funciona grid? (`grid grid-cols-4 gap-6`): Se eligió CSS Grid en lugar de Flexbox para los cuatro pasos porque necesitábamos que cada tarjeta ocupara exactamente un cuarto del ancho disponible (`1fr` por columna) y mantuviera la misma altura automática sin depender de la longitud del texto interno de cada paso. 
+Mientras que Flexbox (`flex justify-between items-center`) fue ideal para alinear elementos de ancho variable en una sola línea (como el logo frente a la navegación en el encabezado o los tres bloques informativos del pie de página), Grid asegura simetría estructural estricta en bloques de contenido repetitivo como los 4 pasos y las 3 cards de rutas (`grid-cols-3`).
