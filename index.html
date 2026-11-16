@@ -57,6 +57,54 @@
     </header>
 
     <main class="container my-5">
+
+        <!-- CARRUSEL DE PROMOCIONES DEL MES -->
+        <section class="mb-5">
+            <h2 class="fw-bold mb-4 text-center">Promociones del mes</h2>
+            <div id="carruselPromociones" class="carousel slide shadow-sm rounded-4 overflow-hidden"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Promoción 1 -->
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="img/bicicleta-portada.png" class="d-block w-100 bg-dark object-fit-cover"
+                            style="max-height: 350px;" alt="Martes 2 por 1 en bicicletas urbanas en Rueda Libre">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h3 class="h5 text-white mb-0">Martes 2x1 en bicicletas urbanas</h3>
+                        </div>
+                    </div>
+                    <!-- Promoción 2 -->
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./img/electrica-urbana.PNG" class="d-block w-100 bg-dark object-fit-contain"
+                            style="max-height: 350px;"
+                            alt="20 por ciento de descuento en bicicletas eléctricas de lunes a jueves">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h3 class="h5 text-white mb-0">20% de descuento en eléctricas de lunes a jueves</h3>
+                        </div>
+                    </div>
+                    <!-- Promoción 3 -->
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./img/ruta-palmas.jpg" class="d-block w-100 bg-dark object-fit-cover"
+                            style="max-height: 350px;"
+                            alt="Recorrido guiado gratis si estás de cumpleaños en Rueda Libre">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h3 class="h5 text-white mb-0">Si cumples años, el recorrido guiado es gratis</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles anterior y siguiente con texto accesible -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselPromociones"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselPromociones"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
         <!-- PORTADA -->
         <section class="portada row align-items-center g-4 mb-5">
             <div class="col-12 col-lg-6 portada-texto">
@@ -107,7 +155,8 @@
                             <h2 class="h5 card-title">Urbana Clásica</h2>
                             <p class="card-text">Cómoda y liviana para las ciclorrutas.</p>
                             <p class="fw-bold text-success mt-auto">$10.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -120,7 +169,8 @@
                             <h2 class="h5 card-title">Urbana Plegable</h2>
                             <p class="card-text">Se dobla en segundos; ideal para combinar con el metro.</p>
                             <p class="fw-bold text-success mt-auto">$12.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -134,7 +184,8 @@
                             <h2 class="h5 card-title">Montaña Trail</h2>
                             <p class="card-text">Suspensión delantera y 21 cambios para las subidas.</p>
                             <p class="fw-bold text-success mt-auto">$15.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -147,7 +198,8 @@
                             <h2 class="h5 card-title">Gravel Aventura</h2>
                             <p class="card-text">Para rutas mixtas de asfalto y destapado.</p>
                             <p class="fw-bold text-success mt-auto">$18.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -160,7 +212,8 @@
                             <h2 class="h5 card-title">Eléctrica Urbana</h2>
                             <p class="card-text">Asistencia eléctrica con 45 km de autonomía.</p>
                             <p class="fw-bold text-success mt-auto">$25.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -173,7 +226,8 @@
                             <h2 class="h5 card-title">Infantil</h2>
                             <p class="card-text">Para niños de 6 a 10 años.</p>
                             <p class="fw-bold text-success mt-auto">$8.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -186,7 +240,8 @@
                             <h2 class="h5 card-title">Tándem</h2>
                             <p class="card-text">Para dos personas; perfecta para pasear en pareja.</p>
                             <p class="fw-bold text-success mt-auto">$20.000 / hora</p>
-                            <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
+                            <a href="./paginas/reservas.html"
+                                class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar</a>
                         </div>
                     </article>
                 </div>
@@ -198,7 +253,7 @@
                 <div class="col-12 col-md-4">
                     <article class="tarjeta-ruta card h-100 shadow-sm p-3 text-center">
                         <img src="./img/ruta-rio.PNG" alt="Recorrido en bicicleta por ríos y parques"
-                            class="card-img-top rounded mb-2">
+                            class="card-img-top rounded mb-2 object-fit-cover" style="height: 180px;">
                         <h4 class="h5">Río y parques</h4>
                         <p class="text-center mb-0">Nivel: Fácil</p>
                     </article>
@@ -207,7 +262,7 @@
                 <div class="col-12 col-md-4">
                     <article class="tarjeta-ruta card h-100 shadow-sm p-3 text-center">
                         <img src="./img/ruta-sabores.PNG" alt="Recorrido en bicicleta por barrios de Medellín"
-                            class="card-img-top rounded mb-2">
+                            class="card-img-top rounded mb-2 object-fit-cover" style="height: 180px;">
                         <h4 class="h5">Sabores de Barrio</h4>
                         <p class="text-center mb-0">Nivel: Medio</p>
                     </article>
@@ -216,7 +271,7 @@
                 <div class="col-12 col-md-4">
                     <article class="tarjeta-ruta card h-100 shadow-sm p-3 text-center">
                         <img src="./img/ruta-palmas.jpg" alt="Recorrido en bicicleta por Las Palmas"
-                            class="card-img-top rounded mb-2">
+                            class="card-img-top rounded mb-2 object-fit-cover" style="height: 180px;">
                         <h4 class="h5">Reto Las Palmas</h4>
                         <p class="text-center mb-0">Nivel: Difícil</p>
                     </article>
@@ -230,38 +285,46 @@
             <div class="row g-4">
                 <!-- Beneficio 1 -->
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm">
+                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm d-flex flex-column">
                         <h3 class="fs-5 fw-bold text-success mb-2">Revisión constante</h3>
                         <p class="text-muted mb-3">Bicicletas revisadas minuciosamente en cada alquiler para garantizar
                             seguridad.</p>
-                        <span class="badge text-bg-success">100% óptimas</span>
+                        <div class="mt-auto">
+                            <span class="badge text-bg-success">100% óptimas</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Beneficio 2 -->
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm">
+                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm d-flex flex-column">
                         <h3 class="fs-5 fw-bold text-success mb-2">Kit incluido</h3>
                         <p class="text-muted mb-3">Casco y candado de seguridad incluidos sin costos adicionales en tu
                             tarifa.</p>
-                        <span class="badge text-bg-success">Sin costo extra</span>
+                        <div class="mt-auto">
+                            <span class="badge text-bg-success">Sin costo extra</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Beneficio 3 -->
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm">
+                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm d-flex flex-column">
                         <h3 class="fs-5 fw-bold text-success mb-2">Guías expertos</h3>
                         <p class="text-muted mb-3">Acompañamiento con guías certificados para disfrutar los recorridos.
                         </p>
-                        <span class="badge text-bg-success">Certificados</span>
+                        <div class="mt-auto">
+                            <span class="badge text-bg-success">Certificados</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Beneficio 4 -->
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm">
+                    <div class="p-4 border rounded-3 h-100 bg-white shadow-sm d-flex flex-column">
                         <h3 class="fs-5 fw-bold text-success mb-2">Múltiples sedes</h3>
                         <p class="text-muted mb-3">Puntos de devolución estratégicos distribuidos en tres sedes de la
                             ciudad.</p>
-                        <span class="badge text-bg-success">3 sedes</span>
+                        <div class="mt-auto">
+                            <span class="badge text-bg-success">3 sedes</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,7 +348,8 @@
 
                 <!-- Enlace destacado -->
                 <div>
-                    <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar ahora</a>
+                    <a href="./paginas/reservas.html" class="btn btn-success fw-bold px-4 py-2 shadow-sm">Reservar
+                        ahora</a>
                 </div>
 
             </div>

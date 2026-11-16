@@ -120,3 +120,5 @@ Curva inicial para adaptar los selectores globales de tipografía y colores de m
 R// Sí, la adopción del framework redujo drásticamente el código CSS personalizado, eliminó los errores comunes de desbordamiento horizontal en móviles y aceleró la maquetación de nuevas secciones, permitiendo enfocar los esfuerzos en la experiencia del usuario y la identidad de marca de Rueda Libre.
 
 20. Minireto 09 semana 2 - organización navbar y botones: el navbar ya lo habi migrado, reviso los botones y realizo las pruebas. 
+
+21. Minireto 10 semana 2 - card y carousel sobre la grilla existente: En la página principal index, se añadió un componente carrusel de Bootstrap (carousel, carousel-inner, carousel-item) configurado con un intervalo de rotación automática (data-bs-ride="carousel"), las cartas en la sección de alquiler de bicicletas, nuestras rutas y por que Rueda libre, ya se tenian implementadas.

@@ -1,4 +1,4 @@
-/* variables de marca para mantener colores, tipografías y espaciados en todo el sitio */
+/* Variables de marca */
 :root {
     --color-verde: #1E7A4F;
     --color-naranja: #F39A2B;
@@ -37,7 +37,6 @@ p {
     line-height: 1.6;
 }
 
-/* Enlaces generales de marca */
 a {
     color: var(--color-verde);
 }
@@ -86,7 +85,6 @@ a:hover {
     color: var(--color-azul);
 }
 
-/* Imágenes fluidas globales */
 img {
     max-width: 100%;
     height: auto;
