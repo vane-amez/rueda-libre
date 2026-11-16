@@ -181,7 +181,7 @@ Decisión de Layout:
 -¿Cómo funciona grid? (`grid grid-cols-4 gap-6`): Se eligió CSS Grid en lugar de Flexbox para los cuatro pasos porque necesitábamos que cada tarjeta ocupara exactamente un cuarto del ancho disponible (`1fr` por columna) y mantuviera la misma altura automática sin depender de la longitud del texto interno de cada paso. 
 Mientras que Flexbox (`flex justify-between items-center`) fue ideal para alinear elementos de ancho variable en una sola línea (como el logo frente a la navegación en el encabezado o los tres bloques informativos del pie de página), Grid asegura simetría estructural estricta en bloques de contenido repetitivo como los 4 pasos y las 3 cards de rutas (`grid-cols-3`).
 
-29. Minireto 05 semana 3 - La noche cabe en tu celular, responsive:
+29. Minireto 06 semana 3 - La noche cabe en tu celular, responsive:
 Diagnóstico inicial a 360 px (antes del ajuste responsive): Al inspeccionar se detectaron los siguientes problemas:
 -Desbodarmiento de botones en el header y en la sección final.
 -Columnas comprimidas e ilegibles.
@@ -199,3 +199,5 @@ Tabla de verificación en DevTools (Modo Dispositivo):
 | **768 px** | Tablet (`md:`) | En fila (`md:flex-row`), enlaces visibles junto al botón. | 2 columnas (`sm:grid-cols-2`). | 2 columnas (`md:grid-cols-2`). | Inscripción en 1 columna amplia; pie en 3 columnas (`md:flex-row`). | No (0 px). |
 | **1024 px** | Portátil (`lg:`) | En fila completa con espaciado amplio. | 3 columnas (`lg:grid-cols-3`). | 4 columnas (`lg:grid-cols-4`). | 2 columnas equilibradas (`lg:grid-cols-2`); pie en 3 bloques. | No (0 px). |
 | **1280 px** | Escritorio estándar | Contenedor centrado (`max-w-6xl`) con alineación uniforme. | 3 columnas simétricas. | 4 columnas simétricas. | 2 columnas con relleno amplio (`lg:p-14`); pie en 3 bloques. | No (0 px). |
+
+30. Minireto 07 semana 3 - Marca nocturna, tema propio y modo oscuro: se Personaliza el tema de Tailwind con los colores y las fuentes de la marca, y se implementa el modo oscuro.

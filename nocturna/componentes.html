@@ -5,26 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kit de Componentes | Rueda Nocturna - Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <!-- CSS compilado por Tailwind CLI -->
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased min-h-screen">
+<body class="bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white font-sans antialiased min-h-screen">
 
-    <header class="w-full bg-slate-900 border-b border-slate-800 py-8 px-6">
+    <header class="w-full bg-white dark:bg-azul-noche border-b border-gris-texto/20 dark:border-white/15 py-8 px-6">
         <div class="w-full max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div class="space-y-1">
-                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-verde-ruta dark:text-amarillo-farol">
                     Sistema de Diseño · Kit componentes
                 </span>
-                <h1 class="text-3xl md:text-4xl font-black text-white tracking-tight">
+                <h1 class="font-heading text-3xl md:text-4xl font-black text-azul-noche dark:text-white tracking-tight">
                     Componentes Rueda Nocturna
                 </h1>
             </div>
-            <a href="./index.html"
-                class="inline-block bg-slate-800 hover:bg-slate-700 text-slate-100 text-sm font-semibold px-5 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-4 focus:ring-slate-400/50 transition-all">
-                Ver Landing
-            </a>
+
+            <div class="flex items-center gap-3">
+                <!-- Botón para alternar Modo Oscuro / Claro -->
+                <button id="theme-toggle" aria-label="Cambiar modo oscuro"
+                    class="bg-crema-fondo dark:bg-white/10 text-azul-noche dark:text-amarillo-farol px-4 py-3 rounded-xl border border-gris-texto/30 dark:border-white/20 focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all flex items-center gap-2 cursor-pointer">
+                    <!-- Icono Sol (modo claro) -->
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <!-- Icono Luna (modo oscuro) -->
+                    <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                    <span class="text-xs font-bold uppercase tracking-wide">Tema</span>
+                </button>
+
+                <a href="./index.html"
+                    class="inline-block bg-crema-fondo hover:bg-gris-texto/10 dark:bg-white/10 dark:hover:bg-white/20 text-azul-noche dark:text-white text-sm font-semibold px-5 py-3 rounded-xl border border-gris-texto/30 dark:border-white/20 focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                    Ver Landing
+                </a>
+            </div>
         </div>
     </header>
 
@@ -32,28 +58,30 @@
 
         <!-- 1. COMPONENTE: BOTONES (3 Variantes) -->
         <section class="space-y-6">
-            <div class="border-b border-slate-800 pb-3">
-                <h2 class="text-2xl font-bold text-white">1. Botones</h2>
-                <p class="text-sm text-slate-400">Variantes principal, secundaria y contorno con estados hover y foco
+            <div class="border-b border-gris-texto/20 dark:border-white/15 pb-3">
+                <h2 class="font-heading text-2xl font-bold text-azul-noche dark:text-white">1. Botones</h2>
+                <p class="text-sm text-gris-texto dark:text-white/80">Variantes principal, secundaria y contorno con
+                    estados hover y foco
                     visible por teclado.</p>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl flex flex-wrap items-center gap-4">
+            <div
+                class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-8 rounded-3xl flex flex-wrap items-center gap-4">
                 <!-- Botón Principal -->
                 <a href="#reservar"
-                    class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white text-base font-bold uppercase tracking-wide px-8 py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-emerald-400/50 transition-all">
+                    class="inline-block bg-verde-ruta hover:bg-verde-ruta/90 text-white text-base font-bold uppercase tracking-wide px-8 py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/50 dark:focus:ring-amarillo-farol/50 transition-all">
                     Inscríbete
                 </a>
 
                 <!-- Botón Secundario -->
                 <a href="#detalles"
-                    class="inline-block bg-slate-800 hover:bg-slate-700 text-slate-100 text-base font-semibold tracking-wide px-6 py-4 rounded-xl shadow-md focus:outline-none focus:ring-4 focus:ring-slate-400/50 transition-all">
+                    class="inline-block bg-crema-fondo hover:bg-gris-texto/15 dark:bg-white/10 dark:hover:bg-white/20 text-azul-noche dark:text-white text-base font-semibold tracking-wide px-6 py-4 rounded-xl shadow-md border border-gris-texto/20 dark:border-white/15 focus:outline-none focus:ring-4 focus:ring-gris-texto/40 transition-all">
                     Ver detalles
                 </a>
 
                 <!-- Botón de Contorno -->
                 <a href="./index.html"
-                    class="inline-block bg-transparent hover:bg-slate-800 text-emerald-400 border-2 border-emerald-500 text-base font-semibold tracking-wide px-6 py-3.5 rounded-xl focus:outline-none focus:ring-4 focus:ring-emerald-400/50 transition-all">
+                    class="inline-block bg-transparent hover:bg-verde-ruta/10 dark:hover:bg-amarillo-farol/10 text-verde-ruta dark:text-amarillo-farol border-2 border-verde-ruta dark:border-amarillo-farol text-base font-semibold tracking-wide px-6 py-3.5 rounded-xl focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
                     Volver al inicio
                 </a>
             </div>
@@ -61,14 +89,15 @@
 
         <!-- 2. COMPONENTE: CARD DE RUTA -->
         <section class="space-y-6">
-            <div class="border-b border-slate-800 pb-3">
-                <h2 class="text-2xl font-bold text-white">2. Card de Ruta</h2>
-                <p class="text-sm text-slate-400">Tarjeta modular reutilizando el botón principal y etiquetas de
+            <div class="border-b border-gris-texto/20 dark:border-white/15 pb-3">
+                <h2 class="font-heading text-2xl font-bold text-azul-noche dark:text-white">2. Card de Ruta</h2>
+                <p class="text-sm text-gris-texto dark:text-white/80">Tarjeta modular reutilizando el botón principal y
+                    etiquetas de
                     dificultad.</p>
             </div>
 
             <article
-                class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-emerald-500/50 transition-all duration-300 flex flex-col md:flex-row">
+                class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-verde-ruta dark:hover:border-amarillo-farol/60 transition-all duration-300 flex flex-col md:flex-row">
                 <div class="md:w-1/3">
                     <img src="../img/luces-centro.jpg" alt="Recorrido Luces del Centro"
                         class="w-full h-56 md:h-full object-cover">
@@ -77,34 +106,42 @@
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
                             <span
-                                class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold uppercase px-3 py-1 rounded-full">
+                                class="bg-verde-ruta/15 dark:bg-verde-ruta text-verde-ruta dark:text-white border border-verde-ruta/30 dark:border-verde-ruta text-xs font-bold uppercase px-3 py-1 rounded-full">
                                 Nivel: Fácil
                             </span>
-                            <span class="text-amber-400 font-extrabold text-xl">
+                            <span class="text-naranja-pedal dark:text-amarillo-farol font-extrabold text-xl">
                                 $55.000
                             </span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">Luces del Centro</h3>
+                        <h3 class="font-heading text-2xl font-bold text-azul-noche dark:text-white">Luces del Centro
+                        </h3>
                     </div>
 
-                    <ul class="grid grid-cols-3 gap-4 border-t border-b border-slate-800 py-4 text-center md:text-left">
+                    <ul
+                        class="grid grid-cols-3 gap-4 border-t border-b border-gris-texto/20 dark:border-white/15 py-4 text-center md:text-left">
                         <li>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Distancia</p>
-                            <p class="text-lg font-bold text-slate-100">10 km</p>
+                            <p
+                                class="text-xs text-gris-texto dark:text-white/70 uppercase tracking-wider font-semibold">
+                                Distancia</p>
+                            <p class="text-lg font-bold text-azul-noche dark:text-white">10 km</p>
                         </li>
                         <li>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Duración</p>
-                            <p class="text-lg font-bold text-slate-100">2 h</p>
+                            <p
+                                class="text-xs text-gris-texto dark:text-white/70 uppercase tracking-wider font-semibold">
+                                Duración</p>
+                            <p class="text-lg font-bold text-azul-noche dark:text-white">2 h</p>
                         </li>
                         <li>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Salida</p>
-                            <p class="text-lg font-bold text-slate-100">Sede Principal</p>
+                            <p
+                                class="text-xs text-gris-texto dark:text-white/70 uppercase tracking-wider font-semibold">
+                                Salida</p>
+                            <p class="text-lg font-bold text-azul-noche dark:text-white">Sede Principal</p>
                         </li>
                     </ul>
 
                     <div>
                         <a href="../paginas/reservas.html"
-                            class="inline-block w-full text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold uppercase tracking-wide py-3.5 px-6 rounded-xl shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400/50 transition-all">
+                            class="inline-block w-full text-center bg-verde-ruta hover:bg-verde-ruta/90 text-white font-bold uppercase tracking-wide py-3.5 px-6 rounded-xl shadow-md focus:outline-none focus:ring-4 focus:ring-verde-ruta/50 dark:focus:ring-amarillo-farol/50 transition-all">
                             Reservar Ruta
                         </a>
                     </div>
@@ -114,35 +151,42 @@
 
         <!-- 3. COMPONENTE: ALERTAS (Información, Éxito y Advertencia) -->
         <section class="space-y-6">
-            <div class="border-b border-slate-800 pb-3">
-                <h2 class="text-2xl font-bold text-white">3. Alertas</h2>
-                <p class="text-sm text-slate-400">Mensajes de estado con borde lateral de acento, fondo suave y
+            <div class="border-b border-gris-texto/20 dark:border-white/15 pb-3">
+                <h2 class="font-heading text-2xl font-bold text-azul-noche dark:text-white">3. Alertas</h2>
+                <p class="text-sm text-gris-texto dark:text-white/80">Mensajes de estado con borde lateral de acento,
+                    fondo suave y
                     atributos de accesibilidad.</p>
             </div>
 
             <div class="space-y-4">
                 <!-- Alerta de Información -->
-                <div class="bg-sky-950/60 border-l-4 border-sky-400 p-6 rounded-xl space-y-1">
-                    <h3 class="text-base font-bold text-sky-300">Información del recorrido</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed">
+                <div
+                    class="bg-azul-noche/5 dark:bg-white/10 border-l-4 border-azul-noche dark:border-white p-6 rounded-xl space-y-1">
+                    <h3 class="font-heading text-base font-bold text-azul-noche dark:text-white">Información del
+                        recorrido</h3>
+                    <p class="text-sm text-gris-texto dark:text-white/85 leading-relaxed">
                         El punto de encuentro es 20 minutos antes de la salida para entrega de luces LED y chaleco
                         reflectivo.
                     </p>
                 </div>
 
                 <!-- Alerta de Éxito (con role="status" para lectores de pantalla) -->
-                <div role="status" class="bg-emerald-950/60 border-l-4 border-emerald-400 p-6 rounded-xl space-y-1">
-                    <h3 class="text-base font-bold text-emerald-300">¡Cupo pre-reservado con éxito!</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed">
+                <div role="status"
+                    class="bg-verde-ruta/10 dark:bg-verde-ruta/25 border-l-4 border-verde-ruta p-6 rounded-xl space-y-1">
+                    <h3 class="font-heading text-base font-bold text-verde-ruta dark:text-white">¡Cupo pre-reservado con
+                        éxito!</h3>
+                    <p class="text-sm text-azul-noche dark:text-white/90 leading-relaxed">
                         Hemos registrado tu solicitud para Rueda Nocturna. Revisa tu bandeja de entrada para confirmar
                         el pago.
                     </p>
                 </div>
 
                 <!-- Alerta de Advertencia -->
-                <div class="bg-amber-950/60 border-l-4 border-amber-400 p-6 rounded-xl space-y-1">
-                    <h3 class="text-base font-bold text-amber-300">Equipamiento obligatorio</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed">
+                <div
+                    class="bg-amarillo-farol/25 dark:bg-amarillo-farol/15 border-l-4 border-naranja-pedal dark:border-amarillo-farol p-6 rounded-xl space-y-1">
+                    <h3 class="font-heading text-base font-bold text-azul-noche dark:text-amarillo-farol">Equipamiento
+                        obligatorio</h3>
+                    <p class="text-sm text-azul-noche dark:text-white/90 leading-relaxed">
                         Recuerda traer documento de identidad original y calzado cerrado; no se permite rodar sin casco
                         abrochado.
                     </p>
@@ -152,35 +196,37 @@
 
         <!-- 4. COMPONENTE: CAMPOS DE FORMULARIO (Correo y Celular) -->
         <section class="space-y-6">
-            <div class="border-b border-slate-800 pb-3">
-                <h2 class="text-2xl font-bold text-white">4. Campos de Formulario</h2>
-                <p class="text-sm text-slate-400">Inputs accesibles con etiqueta asociada, texto de ayuda y anillo de
+            <div class="border-b border-gris-texto/20 dark:border-white/15 pb-3">
+                <h2 class="font-heading text-2xl font-bold text-azul-noche dark:text-white">4. Campos de Formulario</h2>
+                <p class="text-sm text-gris-texto dark:text-white/80">Inputs accesibles con etiqueta asociada, texto de
+                    ayuda y anillo de
                     foco visible.</p>
             </div>
 
-            <form action="#" class="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-6 max-w-xl">
+            <form action="#"
+                class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-8 rounded-3xl space-y-6 max-w-xl">
                 <!-- Campo Correo -->
                 <div class="space-y-2">
-                    <label for="campo-correo" class="block text-sm font-bold text-slate-200">
+                    <label for="campo-correo" class="block text-sm font-bold text-azul-noche dark:text-white">
                         Correo electrónico
                     </label>
                     <input type="email" id="campo-correo" name="correo" placeholder="ejemplo@correo.com"
                         aria-describedby="ayuda-correo"
-                        class="w-full bg-slate-950 text-slate-100 placeholder-slate-500 border border-slate-700 px-4 py-3.5 rounded-xl focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/50 transition-all">
-                    <p id="ayuda-correo" class="text-xs text-slate-400">
+                        class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3.5 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                    <p id="ayuda-correo" class="text-xs text-gris-texto dark:text-white/70">
                         Enviaremos allí el pase digital y las recomendaciones climáticas de la noche.
                     </p>
                 </div>
 
                 <!-- Campo Celular -->
                 <div class="space-y-2">
-                    <label for="campo-celular" class="block text-sm font-bold text-slate-200">
+                    <label for="campo-celular" class="block text-sm font-bold text-azul-noche dark:text-white">
                         Número de celular (WhatsApp)
                     </label>
                     <input type="tel" id="campo-celular" name="celular" placeholder="300 123 4567"
                         aria-describedby="ayuda-celular"
-                        class="w-full bg-slate-950 text-slate-100 placeholder-slate-500 border border-slate-700 px-4 py-3.5 rounded-xl focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/50 transition-all">
-                    <p id="ayuda-celular" class="text-xs text-slate-400">
+                        class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3.5 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                    <p id="ayuda-celular" class="text-xs text-gris-texto dark:text-white/70">
                         Ingresa los 10 dígitos sin espacios para enviarte la ubicación en tiempo real del grupo.
                     </p>
                 </div>
@@ -189,9 +235,30 @@
 
     </main>
 
-    <footer class="text-center py-8 text-xs text-slate-500 border-t border-slate-900">
+    <footer
+        class="text-center py-8 text-xs text-gris-texto dark:text-white/70 border-t border-gris-texto/20 dark:border-white/15">
         Rueda Libre © 2026 · Librería de Componentes Rueda Nocturna
     </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+    </script>
 
 </body>
 
