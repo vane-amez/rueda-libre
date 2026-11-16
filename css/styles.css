@@ -1,27 +1,34 @@
-/* Variables de marca */
+/* 1. Variables de marca */
 :root {
+    /* Paleta de colores principal */
     --color-verde: #1E7A4F;
     --color-naranja: #F39A2B;
     --color-azul: #14213D;
     --color-crema: #FAF6EF;
     --color-gris: #5B6470;
 
+    /* Familias tipográficas */
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-textos: 'Open Sans', sans-serif;
 }
 
+/* 2. Configuración global y reinicio */
+/* Ajuste del modelo de caja para que el padding y el borde no alteren el ancho final */
 * {
     box-sizing: border-box;
 }
 
+/* Estilos base de toda la página */
 body {
-    background-color: var(--color-crema);
-    color: var(--color-azul);
+    background-color: var(--color-crema); /* Color de fondo general */
+    color: var(--color-azul);             /* Color de texto por defecto */
     font-family: var(--fuente-textos);
     font-weight: 400;
-    margin: 0;
+    margin: 0;                            /* Elimina los márgenes exteriores del navegador */
 }
 
+/* 3. Tipografías y enlaces */
+/* Estilos compartidos para todos los niveles de encabezados */
 h1,
 h2,
 h3,
@@ -33,25 +40,37 @@ h6 {
     color: var(--color-azul);
 }
 
+/* Mejora la legibilidad de los párrafos aumentando el espacio entre líneas */
 p {
     line-height: 1.6;
 }
 
+/* Color base para los enlaces de texto */
 a {
     color: var(--color-verde);
 }
 
+/* Cambio de color al pasar el cursor sobre un enlace */
 a:hover {
     color: var(--color-naranja);
 }
 
-/* Tablas de tarifas personalizadas */
+/* 4. Elementos multimedia */
+/* Hace que todas las imágenes sean responsivas y no se desborden de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Componentes específicos */
+/* Contenedor principal de la tabla de tarifas */
 .tabla-tarifas {
     width: 100%;
     text-align: center;
     border: 1px solid var(--color-azul);
 }
 
+/* Espaciado y bordes internos para celdas de encabezado y datos */
 .tabla-tarifas th,
 .tabla-tarifas td {
     padding: 1rem;
@@ -59,13 +78,14 @@ a:hover {
     text-align: center;
 }
 
+/* Estilo destacado para la fila de encabezados de la tabla */
 .tabla-tarifas th {
     background-color: var(--color-azul);
     color: var(--color-crema);
     font-weight: 700;
 }
 
-/* Botón flotante de WhatsApp */
+/* Posicionamiento fijo en la esquina inferior derecha y diseño del botón de WhatsApp */
 .boton-whatsapp {
     position: fixed;
     right: 20px;
@@ -76,16 +96,12 @@ a:hover {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    z-index: 1000;
+    z-index: 1000; /* Asegura que quede por encima de cualquier otro elemento */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Efecto interactivo al pasar el cursor sobre el botón de WhatsApp */
 .boton-whatsapp:hover {
     background-color: var(--color-naranja);
     color: var(--color-azul);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }

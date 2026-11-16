@@ -122,3 +122,8 @@ R// Sí, la adopción del framework redujo drásticamente el código CSS persona
 20. Minireto 09 semana 2 - organización navbar y botones: el navbar ya lo habi migrado, reviso los botones y realizo las pruebas. 
 
 21. Minireto 10 semana 2 - card y carousel sobre la grilla existente: En la página principal index, se añadió un componente carrusel de Bootstrap (carousel, carousel-inner, carousel-item) configurado con un intervalo de rotación automática (data-bs-ride="carousel"), las cartas en la sección de alquiler de bicicletas, nuestras rutas y por que Rueda libre, ya se tenian implementadas.
+
+22. Minireto 11 semana 2 - validación visual, alerta y modal:
+--Alerta superior: Se agregó una franja de advertencia en la parte alta del formulario para recordarle al usuario que debe llevar su documento de identidad original.   
+-Validación visual con Bootstrap: Se configuró el formulario con novalidate y el script oficial para que, si el usuario intenta enviar datos vacíos o incorrectos, aparezcan mensajes de error claros y específicos debajo de cada campo obligatorio.   
+-Modal de políticas: Se creó una ventana emergente que se abre con un botón al lado de la casilla de aceptación. Muestra las 5 políticas de alquiler en una lista y se puede cerrar con el mouse (clic en la "X" o en "Entendido") o presionando la tecla Esc.
