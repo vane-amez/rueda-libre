@@ -137,3 +137,15 @@ Se incorporaron íconos de Bootstrap Icons en la barra de navegación, beneficio
 -Pruebas finales (v2.0): Se verificó la adaptabilidad en móvil (375 px), tablet (768 px) y escritorio (1280 px), la navegación completa con teclado (`Tab` y `Esc` en el modal) y el cumplimiento del ratio de contraste mínimo de 4.5:1 en textos, botones y pie de página.
   - Antes (Bootstrap por defecto): `./img/antes-rueda-libre.PNG`
   - Después (Personalización v2.0): `./img/despues-rueda-libre.PNG`
+
+24. Minireto 01 semana 3: Prototipo nocturno con Play CDN:
+-Construcción del botón en Semana 2 (Bootstrap 5.3):
+  En `index.html` y `paginas/reservas.html` utilizamos clases semánticas de componente predefinidas como `class="btn btn-primary fw-bold px-4 py-2 shadow-sm"` o nuestra variante personalizada `class="btn btn-naranja fw-bold px-4 py-2 shadow-sm"`. La clase base `.btn` ya traía encapsulado el `display: inline-block`, el relleno interno (`padding`), los bordes redondeados y las transiciones, y para darle la identidad naranja de Rueda Libre tuvimos que crear una clase adicional en `styles.css` sobrescribiendo las variables internas del componente (`--bs-btn-bg`, `--bs-btn-border-color`, `--bs-btn-hover-bg`).
+
+-Construcción del botón hoy (Tailwind CSS):
+  En `nocturna/prototipo.html` construimos el enlace `"Inscríbete"` partiendo desde cero sin ninguna clase de componente ni CSS propio, combinando exclusivamente utilidades atómicas de un solo propósito directamente en el HTML:
+  `class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white text-base font-bold uppercase tracking-wide px-8 py-4 rounded-xl shadow-lg"`.
+  Cada propiedad visual (el comportamiento de bloque en línea, el color de fondo, el cambio al pasar el cursor, el grosor tipográfico, el espaciado horizontal/vertical y el radio del borde) se declaró de forma explícita.
+
+-Diferencia clave entre un framework de componentes y uno utility-first:
+  Un framework de componentes (como Bootstrap) entrega piezas de interfaz ya diseñadas, que aceleran el armado estándar, pero obligan a pelear contra sus estilos base o sobrescribir variables en una hoja CSS externa cuando se busca un diseño a medida. En cambio, un framework utility-first (como Tailwind CSS) no impone componentes prediseñados; ofrece bloques de construcción de bajo nivel (utilidades) que permiten diseñar interfaces totalmente personalizadas directamente en el HTML sin escribir CSS adicional ni sufrir conflictos de especificidad.
