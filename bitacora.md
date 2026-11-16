@@ -177,7 +177,25 @@ Accesibilidad uniforme por teclado: todos los botones e inputs reemplazan el con
 
 28. Minireto 05 semana 3 - Maquetación de la landing:
 Decisión de Layout:
-
 -Contenedor unificado: Todas las secciones (`header`, `main > section`, `footer`) comparten exactamente el mismo contenedor (`w-full max-w-6xl mx-auto px-6`), garantizando alineación vertical estricta de márgenes de inicio a fin.
 -¿Cómo funciona grid? (`grid grid-cols-4 gap-6`): Se eligió CSS Grid en lugar de Flexbox para los cuatro pasos porque necesitábamos que cada tarjeta ocupara exactamente un cuarto del ancho disponible (`1fr` por columna) y mantuviera la misma altura automática sin depender de la longitud del texto interno de cada paso. 
 Mientras que Flexbox (`flex justify-between items-center`) fue ideal para alinear elementos de ancho variable en una sola línea (como el logo frente a la navegación en el encabezado o los tres bloques informativos del pie de página), Grid asegura simetría estructural estricta en bloques de contenido repetitivo como los 4 pasos y las 3 cards de rutas (`grid-cols-3`).
+
+29. Minireto 05 semana 3 - La noche cabe en tu celular, responsive:
+Diagnóstico inicial a 360 px (antes del ajuste responsive): Al inspeccionar se detectaron los siguientes problemas:
+-Desbodarmiento de botones en el header y en la sección final.
+-Columnas comprimidas e ilegibles.
+-Tipografía desproporcionada.
+
+Solución aplicada: Se reescribieron las clases siguiendo la estrategia mobile-first de Tailwind CSS (clases base sin prefijo para 360 px y escalado progresivo con `sm:`, `md:` y `lg:`):
+
+Se añade botón hamburguesa para mobile-first.
+
+Tabla de verificación en DevTools (Modo Dispositivo):
+
+| Ancho de pantalla | Dispositivo de referencia | Encabezado | Rutas | ¿Cómo funciona? | Inscripción y Pie | Scroll horizontal |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **360 px** | Celular estándar | Apilado (`flex-col`), enlaces ocultos, botón visible a ancho completo. | 1 columna (`grid-cols-1`). | 1 columna (`grid-cols-1`). | Apilado en 1 columna (`grid-cols-1` / `flex-col`). | No (0 px). |
+| **768 px** | Tablet (`md:`) | En fila (`md:flex-row`), enlaces visibles junto al botón. | 2 columnas (`sm:grid-cols-2`). | 2 columnas (`md:grid-cols-2`). | Inscripción en 1 columna amplia; pie en 3 columnas (`md:flex-row`). | No (0 px). |
+| **1024 px** | Portátil (`lg:`) | En fila completa con espaciado amplio. | 3 columnas (`lg:grid-cols-3`). | 4 columnas (`lg:grid-cols-4`). | 2 columnas equilibradas (`lg:grid-cols-2`); pie en 3 bloques. | No (0 px). |
+| **1280 px** | Escritorio estándar | Contenedor centrado (`max-w-6xl`) con alineación uniforme. | 3 columnas simétricas. | 4 columnas simétricas. | 2 columnas con relleno amplio (`lg:p-14`); pie en 3 bloques. | No (0 px). |
