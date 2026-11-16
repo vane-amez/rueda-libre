@@ -381,10 +381,9 @@ aside {
 }
 
 /* Distribución de reservas con Grid */
-
 .reservas-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr; /* Una sola columna por defecto en celular */
     gap: var(--espacio-grande);
     align-items: start;
 }
@@ -516,38 +515,6 @@ fieldset {
     background-color: var(--color-verde);
 }
 
-/* Adaptación para pantallas pequeñas */
-
-@media (max-width: 600px) {
-    header.encabezado {
-        justify-content: center;
-        }    .portada {
-        grid-template-columns: 1fr;
-    }
-    .galeria-rutas {
-        grid-template-columns: 1fr;
-    }
-    .reservas-layout {
-        grid-template-columns: 1fr;
-    }
-    .fila-campos {
-        flex-direction: column;
-    }
-    .marca {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    header.encabezado nav {
-        width: 100%;
-    }
-    #menu {
-        justify-content: center;
-    }
-    .sitio-footer {
-        flex-direction: column;
-    }
-}
-
 /* Cuadrícula de nuestra flota */
 .cuadricula-flota {
     display: grid;
@@ -582,4 +549,43 @@ fieldset {
 .tarjeta-flota .boton-reservar {
     margin-top: auto;
     align-self: flex-start;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet y superiores (a partir de 768px) */
+@media (min-width: 768px) {
+    header.encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .portada {
+        grid-template-columns: 1fr 1fr;
+    }
+    .galeria-rutas {
+        grid-template-columns: repeat(2, 1fr); /* o lo que prefieras para tablet */
+    }
+    .reservas-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Escritorio y superiores (a partir de 1200px) */
+@media (min-width: 1200px) {
+    .galeria-rutas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Contenedor adaptativo para tablas en dispositivos móviles */
+@media (max-width: 767px) {
+    .tabla-tarifas {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Permite hacer scroll lateral suave en la tabla */
+        -webkit-overflow-scrolling: touch; /* Mejora la fluidez en celulares reales */
+    }
 }
