@@ -70,7 +70,7 @@ Se evidenció una diferencia de 34 px, correspondiente al espacio adicional gene
 15. Minireto 04 semana 2 - mobile-first para que el sitio funcione en móvil, tablet y escritorio: En la inspección de la página se observa que no se desborda las tablas, auqnue se observa en algunas que no se corren verticalmente, sino que se quedan horizontalmente y se alargan en tipo de pantalla para celular, lo mismo paso con el formulario y contacto que tienen layaout. Para corregir esto se cambio grid-template-columns: 2fr; a una sola/grid-template-columns: 1fr.
 En tarifas y rutas, las tablas quedan por fuera del contenedor igual que el boton del WhatsApp, no se adaptan a la versión del celular, se añade regla responsiva con overflow-x: auto en pantallas menores a 768 px.
 
-16. Minireto 05 semana 2 - Aplicación de Bootstrap: 
+16. Minireto 05 semana 2 - Prueba con Bootstrap: 
 Tiempo invertido: 20 minutos.
 Cantidad de código (CSS propio vs. Bootstrap):**
 - Versión CSS propio: 35 líneas dedicadas exclusivamente a la distribución y presentación de la flota (`.cuadricula-flota` con Grid `auto-fit`, `.tarjeta-flota` con Flexbox, alturas de imagen y alineación del botón), sumadas a las reglas heredadas de `.tarjeta-servicio` y `.boton-reservar`.
@@ -80,3 +80,10 @@ Espaciado uniforme (*gutters* horizontales y verticales con `g-4`) y tarjetas de
 Imágenes adaptables al ancho de la tarjeta (`card-img-top`) y resets tipográficos limpios desde el primer momento.
 - ¿Qué control perdí?: Identidad visual de marca:** Se perdieron nuestra paleta de colores personalizada (`--color-azul`, `--color-verde`, `--color-crema`, `--color-naranja`) y nuestras tipografías (`Montserrat` y `Open Sans`), adoptando los tonos y fuentes genéricos de Bootstrap.
 Alturas de imagen fijas: En CSS propio teníamos `height: 180px; object-fit: cover;` para recortar todas las fotos al mismo alto exacto; sin CSS adicional en Bootstrap, las imágenes conservan su proporción original y pueden variar ligeramente de altura si las fotos tienen dimensiones distintas.
+
+17. Minireto 06 semana 2 - utilidades: 
+-`d-none d-md-block` (Display utilities): Permite controlar la visibilidad responsiva de un elemento. Oculta por defecto el elemento en pantallas móviles (`d-none`) y lo muestra como bloque (`d-block`) únicamente a partir del breakpoint mediano `md` (≥768px). Se utilizó para el elemento decorativo de la franja final.
+-`flex-column flex-md-row` (Flexbox direction): Modifica la dirección del flujo de los elementos flexibles según el ancho de pantalla. Apila los elementos en columna de forma vertical en celulares (`flex-column`) y los reorganiza en una línea horizontal a partir del breakpoint `md` (`flex-md-row`).
+-`gap-4` (Flexbox / Grid gap): Define un espacio de separación uniforme y estandarizado (equivalente a `1.5rem`) entre los elementos hijos directos de un contenedor flexible (`d-flex`) o de grilla, evitando la necesidad de aplicar márgenes manuales.
+-`text-bg-dark` (Color and background): Aplica simultáneamente un color de fondo oscuro corporativo o temático (`dark`) y ajusta automáticamente el color del texto a claro para garantizar el contraste adecuado y la accesibilidad web.
+-`rounded-4` (Borders / Border-radius): Modifica el radio de las esquinas del contenedor aplicando un borde redondeado amplio y moderno (equivalente a `1rem`), dándole un acabado visual estilizado a la franja principal sin escribir reglas en CSS.
