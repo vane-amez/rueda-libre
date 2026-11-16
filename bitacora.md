@@ -118,3 +118,5 @@ Curva inicial para adaptar los selectores globales de tipografía y colores de m
 
 -Conclusión:¿Bootstrap realmente redujo el trabajo? 
 R// Sí, la adopción del framework redujo drásticamente el código CSS personalizado, eliminó los errores comunes de desbordamiento horizontal en móviles y aceleró la maquetación de nuevas secciones, permitiendo enfocar los esfuerzos en la experiencia del usuario y la identidad de marca de Rueda Libre.
+
+20. Minireto 09 semana 2 - organización navbar y botones: el navbar ya lo habi migrado, reviso los botones y realizo las pruebas. 
