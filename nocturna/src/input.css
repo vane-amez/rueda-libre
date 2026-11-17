@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Habilitar control manual de modo oscuro por clase en Tailwind v4 */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
@@ -15,4 +14,22 @@
   --color-crema-fondo: #FAF6EF;
   --color-gris-texto: #5B6470;
   --color-amarillo-farol: #FFD166;
+}
+
+/* 2. Clases con @apply para reducir repetición en el HTML (Máximo 3) */
+@layer components {
+  /* Botón Principal (Inscríbete / Reservar) */
+  .btn-principal {
+    @apply inline-block bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all;
+  }
+
+  /* Botón Secundario (Ver detalles / Ver más) */
+  .btn-secundario {
+    @apply inline-block bg-crema-fondo hover:bg-gris-texto/15 dark:bg-white/10 dark:hover:bg-white/20 text-azul-noche dark:text-white text-sm sm:text-base font-semibold tracking-wide px-6 py-3.5 sm:py-4 rounded-xl shadow-md border border-gris-texto/20 dark:border-white/15 focus:outline-none focus:ring-4 focus:ring-gris-texto/40 transition-all text-center;
+  }
+
+  /* Botón de Contorno / Enlace de retorno */
+  .btn-contorno {
+    @apply inline-block bg-transparent hover:bg-verde-ruta/10 dark:hover:bg-amarillo-farol/10 text-verde-ruta dark:text-amarillo-farol border-2 border-verde-ruta dark:border-amarillo-farol text-sm sm:text-base font-semibold tracking-wide px-6 py-3 sm:py-3.5 rounded-xl focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all text-center;
+  }
 }

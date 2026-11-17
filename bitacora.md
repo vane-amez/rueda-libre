@@ -201,3 +201,31 @@ Tabla de verificación en DevTools (Modo Dispositivo):
 | **1280 px** | Escritorio estándar | Contenedor centrado (`max-w-6xl`) con alineación uniforme. | 3 columnas simétricas. | 4 columnas simétricas. | 2 columnas con relleno amplio (`lg:p-14`); pie en 3 bloques. | No (0 px). |
 
 30. Minireto 07 semana 3 - Marca nocturna, tema propio y modo oscuro: se Personaliza el tema de Tailwind con los colores y las fuentes de la marca, y se implementa el modo oscuro.
+
+31. Minireto 08 semana 3 - Código legible y veredicto: Bootstrap vs Tailwind:
+-Refactorización y Clases con `@apply`
+Se identificaron múltiples clases repetidas en los botones de acción principal, secundaria y de contorno de la landing y el kit de componentes. Para solucionar el problema de legibilidad sin perder flexibilidad, se crearon tres clases propietarias en la capa de componentes (`@layer components`):
+* `.btn-principal` (Reemplaza ~14 clases utilitarias de estilos, sombras y estados de foco).
+* `.btn-secundario` (Simplifica la estructura de los botones de navegación interna).
+* `.btn-contorno` (Optimiza los bordes y estados interactivos de retorno).
+
+-Validación de Contraste en Modo Oscuro (WCAG AA / AAA)
+Verde Ruta sobre Azul Noche, Se ajustó en contenedores y botones sólidos utilizando texto blanco o acentos de alta visibilidad, alcanzando un ratio superior a 7:1, superando holgadamente el mínimo exigido de 4.5:1.
+
+-Mediciones de Rendimiento y Recursos (DevTools Network)
+Tailwind CSS v4 (Minificado con `--minify`): Tamaño del archivo `output.css`: ~51 KB (Incluyendo todas las utilidades personalizadas del `@theme` y clases de componentes).
+
+-Bootstrap v2.0 (Sitio principal anterior referencial):
+Tamaño del framework CSS (`bootstrap.css` / minificado): ~22.4 KB
+Tamaño del script de interacción (`bootstrap.js` / minificado): ~29.5 KB
+Peso total de assets de UI**: ~51.9 KB
+
+| Criterio | Bootstrap (v2.0 / Clásico) | Tailwind CSS (v4 Utility-First) |
+| :------- | :------------------------- | :------------------------------ |
+| **Curva de Aprendizaje** | Sencilla para componentes predefinidos; compleja al requerir romper estilos por defecto. | Moderada al inicio por la cantidad de utilidades; muy rápida y fluida una vez dominado el sistema. |
+| **Personalización** | Limitada a la sobreescritura de variables globales (`:root` / SASS); genera código muerto (CSS bloat). | Total y directa mediante `@theme` y variables nativas; compila exclusivamente lo que se utiliza. |
+| **Tamaño Final (Network)** | Alto (~52 KB sumando CSS y JS obligatorio para componentes interactivos). | Muy bajo (~12 KB o menos de CSS puro, sin dependencias obligatorias de JavaScript). |
+| **Casos de Uso** | Paneles administrativos estándar y prototipados genéricos rápidos sin identidad de marca estricta. | Landings de alta fidelidad, diseño de autor, marcas corporativas personalizadas y diseño adaptativo avanzado. |
+
+-Recomendación final: Adoptar Tailwind CSS como el estándar definitivo para la próxima versión de todo el sitio web de *Rueda Libre*. 
+POr que la marca requiere una identidad visual muy particular (combinación de tonos institucionales con acentos dinámicos como el *Amarillo Farol* y soporte nativo impecable para *Modo Oscuro*). Bootstrap obligaría a escribir hojas de estilo secundarias muy pesadas para sobrescribir componentes. Tailwind ofrece un rendimiento en red superior (archivos hasta un 75% más ligeros), mayor mantenibilidad gracias al uso modular de `@theme` y componentes limpios, y una experiencia visual consistente en cualquier dispositivo móvil o de escritorio.

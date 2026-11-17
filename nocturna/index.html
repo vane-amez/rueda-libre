@@ -52,8 +52,7 @@
                     </svg>
                 </button>
 
-                <a href="#inscripcion"
-                    class="inline-block bg-verde-ruta text-white text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded-xl shadow-md">
+                <a href="#inscripcion" class="btn-principal text-xs py-2.5 px-4 shadow-md">
                     Inscríbete.
                 </a>
 
@@ -67,7 +66,7 @@
                 </button>
             </div>
 
-            <!-- Navegación (Oculta por defecto en móvil, desplegable con JS; siempre visible en md+) -->
+            <!-- Navegación -->
             <nav id="menu-nav" aria-label="Navegación principal"
                 class="w-full md:w-auto hidden md:flex flex-col md:flex-row items-center gap-6 lg:gap-8 pt-4 md:pt-0 border-t md:border-t-0 border-gris-texto/20 dark:border-white/15">
                 <ul
@@ -115,9 +114,8 @@
                         <span class="text-xs font-bold uppercase tracking-wide">Tema</span>
                     </button>
 
-                    <!-- Botón principal visible en escritorio (md+) -->
-                    <a href="#inscripcion"
-                        class="inline-block bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm lg:text-base font-bold uppercase tracking-wide px-6 lg:px-8 py-3.5 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                    <!-- Botón principal con clase @apply -->
+                    <a href="#inscripcion" class="btn-principal text-sm lg:text-base px-6 lg:px-8 py-3.5">
                         Inscríbete.
                     </a>
                 </div>
@@ -134,7 +132,6 @@
             <div
                 class="w-full max-w-4xl mx-auto bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 sm:p-10 lg:p-14 rounded-3xl space-y-6 sm:space-y-8 shadow-2xl text-center">
 
-                <!-- Etiqueta de campaña -->
                 <div>
                     <span
                         class="inline-block bg-amarillo-farol text-azul-noche text-xs font-extrabold uppercase tracking-widest px-3.5 sm:px-4 py-1.5 rounded-full shadow-sm">
@@ -142,7 +139,6 @@
                     </span>
                 </div>
 
-                <!-- Título y subtítulo escalables por breakpoint -->
                 <div class="space-y-3 sm:space-y-4">
                     <h1
                         class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black text-azul-noche dark:text-white tracking-tight leading-tight">
@@ -154,7 +150,6 @@
                     </p>
                 </div>
 
-                <!-- Datos destacados apilados en móvil y en fila desde sm -->
                 <div
                     class="w-full max-w-md bg-crema-fondo dark:bg-azul-noche p-5 sm:p-6 rounded-2xl border border-gris-texto/20 dark:border-white/15 mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
                     <div class="space-y-1">
@@ -181,14 +176,12 @@
                     </div>
                 </div>
 
-                <!-- Botones centrados (apilados en móvil muy pequeño, en fila desde sm) -->
+                <!-- Botones centrados con clases @apply -->
                 <div class="pt-2 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 text-center">
-                    <a href="#inscripcion"
-                        class="w-full sm:w-auto inline-block bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                    <a href="#inscripcion" class="w-full sm:w-auto btn-principal">
                         Inscríbete.
                     </a>
-                    <a href="#rutas"
-                        class="w-full sm:w-auto inline-block bg-crema-fondo hover:bg-gris-texto/15 dark:bg-white/10 dark:hover:bg-white/20 text-azul-noche dark:text-white text-sm sm:text-base font-semibold tracking-wide px-6 py-3.5 sm:py-4 rounded-xl shadow-md border border-gris-texto/20 dark:border-white/15 focus:outline-none focus:ring-4 focus:ring-gris-texto/40 transition-all">
+                    <a href="#rutas" class="w-full sm:w-auto btn-secundario">
                         Ver detalles.
                     </a>
                 </div>
@@ -196,7 +189,7 @@
             </div>
         </section>
 
-        <!-- 3. SECCIÓN RUTAS (1 columna en móvil, 2 desde sm [640px], 3 desde lg [1024px]) -->
+        <!-- 3. SECCIÓN RUTAS -->
         <section id="rutas" class="w-full max-w-6xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8">
             <div class="space-y-2 text-center">
                 <h2
@@ -209,10 +202,9 @@
                 </p>
             </div>
 
-            <!-- Cuadrícula progresiva: grid-cols-1 -> sm:grid-cols-2 -> lg:grid-cols-3 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Card 1: Luces del Centro (Fácil) -->
+                <!-- Card 1 -->
                 <article id="detalles"
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-verde-ruta dark:hover:border-amarillo-farol/60 transition-all duration-300 flex flex-col">
                     <img src="../img/luces-centro.jpg" alt="Recorrido Luces del Centro"
@@ -257,15 +249,14 @@
                         </ul>
 
                         <div>
-                            <a href="#inscripcion"
-                                class="inline-block w-full text-center bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                            <a href="#inscripcion" class="w-full btn-principal text-center">
                                 Reservar Ruta.
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Card 2: Miradores de la Ciudad (Medio) -->
+                <!-- Card 2 -->
                 <article
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-naranja-pedal dark:hover:border-amarillo-farol/60 transition-all duration-300 flex flex-col">
                     <img src="../img/miradores.jpg" alt="Recorrido Miradores de la Ciudad"
@@ -310,15 +301,14 @@
                         </ul>
 
                         <div>
-                            <a href="#inscripcion"
-                                class="inline-block w-full text-center bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                            <a href="#inscripcion" class="w-full btn-principal text-center">
                                 Reservar Ruta.
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Card 3: Luna en Las Palmas (Difícil) -->
+                <!-- Card 3 -->
                 <article
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-naranja-pedal dark:hover:border-naranja-pedal transition-all duration-300 flex flex-col">
                     <img src="../img/luna-palmas.jpg" alt="Recorrido Luna en Las Palmas"
@@ -363,8 +353,7 @@
                         </ul>
 
                         <div>
-                            <a href="#inscripcion"
-                                class="inline-block w-full text-center bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                            <a href="#inscripcion" class="w-full btn-principal text-center">
                                 Reservar Ruta.
                             </a>
                         </div>
@@ -374,7 +363,7 @@
             </div>
         </section>
 
-        <!-- 4. SECCIÓN "¿CÓMO FUNCIONA?" (1 columna en móvil, 2 desde md, 4 desde lg) -->
+        <!-- 4. SECCIÓN "¿CÓMO FUNCIONA?" -->
         <section id="como-funciona" class="w-full max-w-6xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8">
             <div class="space-y-2 text-center">
                 <h2
@@ -387,7 +376,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Paso 1 -->
                 <div
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 rounded-3xl space-y-3 text-center">
                     <span
@@ -401,7 +389,6 @@
                     </p>
                 </div>
 
-                <!-- Paso 2 -->
                 <div
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 rounded-3xl space-y-3 text-center">
                     <span
@@ -415,7 +402,6 @@
                     </p>
                 </div>
 
-                <!-- Paso 3 -->
                 <div
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 rounded-3xl space-y-3 text-center">
                     <span
@@ -429,7 +415,6 @@
                     </p>
                 </div>
 
-                <!-- Paso 4 -->
                 <div
                     class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 rounded-3xl space-y-3 text-center">
                     <span
@@ -444,12 +429,11 @@
             </div>
         </section>
 
-        <!-- 5. FRANJA DE INSCRIPCIÓN (1 columna en móvil/tablet, 2 columnas desde lg) -->
+        <!-- 5. FRANJA DE INSCRIPCIÓN -->
         <section id="inscripcion" class="w-full max-w-6xl mx-auto px-4 sm:px-6">
             <div
                 class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 sm:p-10 lg:p-14 rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start shadow-2xl">
 
-                <!-- Columna izquierda: Información y Alerta de Advertencia -->
                 <div class="space-y-5 sm:space-y-6">
                     <span
                         class="inline-block bg-amarillo-farol text-azul-noche text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full">
@@ -464,7 +448,6 @@
                         salida.
                     </p>
 
-                    <!-- Alerta de Advertencia del kit -->
                     <div
                         class="bg-amarillo-farol/25 dark:bg-amarillo-farol/15 border-l-4 border-naranja-pedal dark:border-amarillo-farol p-5 sm:p-6 rounded-xl space-y-1">
                         <h3 class="font-heading text-base font-bold text-azul-noche dark:text-amarillo-farol">
@@ -476,9 +459,7 @@
                     </div>
                 </div>
 
-                <!-- Columna derecha: Campos de formulario y botones -->
                 <form action="../paginas/reservas.html" class="space-y-5 sm:space-y-6">
-                    <!-- Campo Correo -->
                     <div class="space-y-2">
                         <label for="campo-correo" class="block text-sm font-bold text-azul-noche dark:text-white">
                             Correo electrónico.
@@ -491,7 +472,6 @@
                         </p>
                     </div>
 
-                    <!-- Campo Celular -->
                     <div class="space-y-2">
                         <label for="campo-celular" class="block text-sm font-bold text-azul-noche dark:text-white">
                             Número de celular (WhatsApp).
@@ -504,13 +484,12 @@
                         </p>
                     </div>
 
+                    <!-- Botones de formulario con clases @apply -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-                        <button type="submit"
-                            class="w-full sm:w-auto text-center inline-block bg-verde-ruta hover:bg-verde-ruta/90 text-white text-sm sm:text-base font-bold uppercase tracking-wide px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all cursor-pointer">
+                        <button type="submit" class="w-full sm:w-auto btn-principal cursor-pointer">
                             Inscríbete.
                         </button>
-                        <a href="../index.html"
-                            class="w-full sm:w-auto text-center inline-block bg-transparent hover:bg-verde-ruta/10 dark:hover:bg-amarillo-farol/10 text-verde-ruta dark:text-amarillo-farol border-2 border-verde-ruta dark:border-amarillo-farol text-sm sm:text-base font-semibold tracking-wide px-6 py-3 sm:py-3.5 rounded-xl focus:outline-none focus:ring-4 focus:ring-verde-ruta/40 dark:focus:ring-amarillo-farol/40 transition-all">
+                        <a href="../index.html" class="w-full sm:w-auto btn-contorno text-center">
                             Volver al inicio.
                         </a>
                     </div>
@@ -520,12 +499,11 @@
         </section>
     </main>
 
-    <!-- 6. PIE DE PÁGINA EN TRES BLOQUES (Apilado en móvil, en fila desde md) -->
+    <!-- 6. PIE DE PÁGINA -->
     <footer
         class="w-full bg-white dark:bg-azul-noche border-t border-gris-texto/20 dark:border-white/15 py-10 sm:py-12">
         <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-start gap-8">
 
-            <!-- Bloque 1: Marca -->
             <div class="flex-1 space-y-2">
                 <h3 class="font-heading text-lg font-bold text-azul-noche dark:text-white">Rueda Libre.</h3>
                 <p class="text-sm text-gris-texto dark:text-white/75">
@@ -533,7 +511,6 @@
                 </p>
             </div>
 
-            <!-- Bloque 2: Punto de encuentro y horarios -->
             <div class="flex-1 space-y-2">
                 <h3 class="font-heading text-lg font-bold text-azul-noche dark:text-white">Salida y Horarios.</h3>
                 <p class="text-sm text-gris-texto dark:text-white/75">
@@ -544,7 +521,6 @@
                 </p>
             </div>
 
-            <!-- Bloque 3: Contacto y Kit -->
             <div class="flex-1 space-y-2">
                 <h3 class="font-heading text-lg font-bold text-azul-noche dark:text-white">Contacto y Recursos.</h3>
                 <p class="text-sm text-gris-texto dark:text-white/75">
@@ -563,7 +539,6 @@
 
     <!-- Scripts de Menú Móvil y Cambio de Tema -->
     <script>
-        // Menú Hamburguesa
         const btn = document.getElementById('menu-btn');
         const nav = document.getElementById('menu-nav');
 
@@ -581,7 +556,6 @@
             });
         });
 
-        // Alternancia Modo Oscuro / Claro
         const toggleTheme = () => {
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
