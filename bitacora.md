@@ -243,5 +243,5 @@ Comprobación visual en modo claro y oscuro (`dark:`), validando el contraste ad
 Verificación en Local y GitHub Pages:** Se comprobaron todos los enlaces mediante el servidor local sin presentarse errores 404 de rutas rotas. Se mantuvo la paridad cromática estricta en ambos entornos utilizando los mismos códigos de color institucionales y tipografías.
 
 34. Minireto 11 semana 3 - contrarreloj 3: requerimiento de última hora.
--Tiempo invertido: 45 minutos: Aplicación de Box Model, Grid y Flexbox:** 
+-Tiempo invertido: 45 minutos: Aplicación de Box Model, Grid y Flexbox: 
 - Verificación en DevTools y Contraste: Se inspeccionó el modelo de caja comprobando que el relleno interior y los anchos se distribuyen equitativamente. Se validó el contraste de los textos y etiquetas tanto en modo claro como en modo oscuro.
