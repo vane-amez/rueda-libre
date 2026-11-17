@@ -229,3 +229,11 @@ Peso total de assets de UI**: ~51.9 KB
 
 -Recomendación final: Adoptar Tailwind CSS como el estándar definitivo para la próxima versión de todo el sitio web de *Rueda Libre*. 
 POr que la marca requiere una identidad visual muy particular (combinación de tonos institucionales con acentos dinámicos como el *Amarillo Farol* y soporte nativo impecable para *Modo Oscuro*). Bootstrap obligaría a escribir hojas de estilo secundarias muy pesadas para sobrescribir componentes. Tailwind ofrece un rendimiento en red superior (archivos hasta un 75% más ligeros), mayor mantenibilidad gracias al uso modular de `@theme` y componentes limpios, y una experiencia visual consistente en cualquier dispositivo móvil o de escritorio.
+
+32. Minireto 09 semana 3 - contrarreloj 1: inscripción a Rueda Nocturna.
+32. Sprint Formulario de Inscripción Rueda Nocturna:
+-Tiempo invertido: 35 minutos: Se estructuró el formulario agrupando los controles lógicamente mediante etiquetas `<fieldset>` y `<legend>`, asociando cada campo con su respectivo `<label>` mediante atributos `for` e `id` explícitos. 
+- Pruebas de validación y teclado:
+Envío con campos vacíos bloqueado exitosamente por el navegador.
+Ingreso de celular inválido (ej. número comenzando en 4) bloqueado.
+Comprobación visual en modo claro y oscuro (`dark:`), validando el contraste adecuado en los bordes y campos de entrada.

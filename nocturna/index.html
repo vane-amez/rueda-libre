@@ -429,11 +429,12 @@
             </div>
         </section>
 
-        <!-- 5. FRANJA DE INSCRIPCIÓN -->
+        <!-- 5. FRANJA DE INSCRIPCIÓN / FORMULARIO AVANZADO -->
         <section id="inscripcion" class="w-full max-w-6xl mx-auto px-4 sm:px-6">
             <div
                 class="bg-white dark:bg-white/5 border border-gris-texto/20 dark:border-white/15 p-6 sm:p-10 lg:p-14 rounded-3xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start shadow-2xl">
 
+                <!-- Columna izquierda: Información y Alerta de Advertencia -->
                 <div class="space-y-5 sm:space-y-6">
                     <span
                         class="inline-block bg-amarillo-farol text-azul-noche text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full">
@@ -444,8 +445,8 @@
                         Reserva tu cupo en Rueda Nocturna.
                     </h2>
                     <p class="text-sm sm:text-base text-gris-texto dark:text-white/85 leading-relaxed">
-                        Déjanos tus datos de contacto para enviarte el enlace de confirmación y el pase digital de
-                        salida.
+                        Completa el formulario oficial de inscripción para recibir tu pase digital y las recomendaciones
+                        de la rodada.
                     </p>
 
                     <div
@@ -459,37 +460,138 @@
                     </div>
                 </div>
 
-                <form action="../paginas/reservas.html" class="space-y-5 sm:space-y-6">
-                    <div class="space-y-2">
-                        <label for="campo-correo" class="block text-sm font-bold text-azul-noche dark:text-white">
-                            Correo electrónico.
+                <!-- Columna derecha: Formulario completo semántico y validado -->
+                <form action="../paginas/reservas.html" method="GET" class="space-y-6">
+
+                    <!-- Fieldset 1: Datos Personales -->
+                    <fieldset class="space-y-4 border border-gris-texto/20 dark:border-white/15 p-5 rounded-2xl">
+                        <legend
+                            class="font-heading font-bold text-sm text-verde-ruta dark:text-amarillo-farol px-2 uppercase tracking-wide">
+                            1. Datos Personales
+                        </legend>
+
+                        <div class="space-y-2">
+                            <label for="nombre" class="block text-sm font-bold text-azul-noche dark:text-white">
+                                Nombre completo <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana María Pérez" required
+                                minlength="3"
+                                class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="correo" class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Correo electrónico <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="celular" class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Celular (WhatsApp) <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="tel" id="celular" name="celular" placeholder="3001234567" required
+                                    pattern="^3[0-9]{9}$"
+                                    title="Debe tener exactamente 10 dígitos y empezar por el número 3"
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Fieldset 2: Detalles de la Rodada -->
+                    <fieldset class="space-y-4 border border-gris-texto/20 dark:border-white/15 p-5 rounded-2xl">
+                        <legend
+                            class="font-heading font-bold text-sm text-verde-ruta dark:text-amarillo-farol px-2 uppercase tracking-wide">
+                            2. Detalles de la Rodada
+                        </legend>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="ruta" class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Elige la Ruta <span class="text-rose-500">*</span>
+                                </label>
+                                <select id="ruta" name="ruta" required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                                    <option value="" disabled selected>Selecciona un recorrido</option>
+                                    <option value="luces-centro">Luces del Centro (Fácil - $55.000)</option>
+                                    <option value="miradores">Miradores de la Ciudad (Medio - $75.000)</option>
+                                    <option value="luna-palmas">Luna en Las Palmas (Difícil - $95.000)</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="dia" class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Día de salida <span class="text-rose-500">*</span>
+                                </label>
+                                <select id="dia" name="dia" required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                                    <option value="" disabled selected>Selecciona el día</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                    <option value="sabado">Sábado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="space-y-2">
+                                <label for="acompanantes"
+                                    class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Acompañantes (0-3) <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="number" id="acompanantes" name="acompanantes" min="0" max="3" value="0"
+                                    required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="experiencia"
+                                    class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    Nivel de experiencia <span class="text-rose-500">*</span>
+                                </label>
+                                <select id="experiencia" name="experiencia" required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                                    <option value="" disabled selected>Nivel</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="bici-propia"
+                                    class="block text-sm font-bold text-azul-noche dark:text-white">
+                                    ¿Bici propia? <span class="text-rose-500">*</span>
+                                </label>
+                                <select id="bici-propia" name="bici_propia" required
+                                    class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white border border-gris-texto/30 dark:border-white/25 px-4 py-3 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
+                                    <option value="" disabled selected>Selecciona</option>
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Aceptación de condiciones -->
+                    <div class="flex items-start gap-3 pt-2">
+                        <input type="checkbox" id="condiciones" name="condiciones" required
+                            class="mt-1 w-5 h-5 rounded border-gris-texto/30 text-verde-ruta focus:ring-verde-ruta/40 cursor-pointer">
+                        <label for="condiciones"
+                            class="text-sm text-gris-texto dark:text-white/80 leading-relaxed cursor-pointer">
+                            Acepto las condiciones de seguridad, el uso obligatorio de casco y las políticas de
+                            cancelación de la campaña Rueda Nocturna. <span class="text-rose-500">*</span>
                         </label>
-                        <input type="email" id="campo-correo" name="correo" placeholder="ejemplo@correo.com"
-                            aria-describedby="ayuda-correo" required
-                            class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3.5 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
-                        <p id="ayuda-correo" class="text-xs text-gris-texto dark:text-white/70">
-                            Enviaremos allí el pase digital y las recomendaciones climáticas de la noche.
-                        </p>
                     </div>
 
-                    <div class="space-y-2">
-                        <label for="campo-celular" class="block text-sm font-bold text-azul-noche dark:text-white">
-                            Número de celular (WhatsApp).
-                        </label>
-                        <input type="tel" id="campo-celular" name="celular" placeholder="300 123 4567"
-                            aria-describedby="ayuda-celular" required
-                            class="w-full bg-crema-fondo dark:bg-azul-noche text-azul-noche dark:text-white placeholder-gris-texto dark:placeholder-white/50 border border-gris-texto/30 dark:border-white/25 px-4 py-3.5 rounded-xl focus:outline-none focus:border-verde-ruta dark:focus:border-amarillo-farol focus:ring-4 focus:ring-verde-ruta/30 dark:focus:ring-amarillo-farol/30 transition-all">
-                        <p id="ayuda-celular" class="text-xs text-gris-texto dark:text-white/70">
-                            Ingresa los 10 dígitos sin espacios para enviarte la ubicación en tiempo real del grupo.
-                        </p>
-                    </div>
-
-                    <!-- Botones de formulario con clases @apply -->
+                    <!-- Botones de acción -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
                         <button type="submit" class="w-full sm:w-auto btn-principal cursor-pointer">
-                            Inscríbete.
+                            Completar Inscripción.
                         </button>
-                        <a href="../index.html" class="w-full sm:w-auto btn-contorno text-center">
+                        <a href="./index.html" class="w-full sm:w-auto btn-contorno text-center">
                             Volver al inicio.
                         </a>
                     </div>
